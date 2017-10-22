@@ -1,1 +1,5 @@
 <%- partial('_partial/article', {post: page, view: true}) %>
+
+<% if( theme.disqus.enable && page.comments ) { %>
+<%- partial('_partial/comments', {post: page}) %>
+<% } %>

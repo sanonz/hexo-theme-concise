@@ -29,6 +29,12 @@ index_widgets:
 show_count: false
 archive_type: 'monthly'
 
+# Disqus 
+disqus:
+  enable: true
+  shortname: sanonz    #your name
+  count: true
+
 # Miscellaneous
 google_analytics:
 favicon: /favicon.png

@@ -35,6 +35,12 @@ author:
   name: Sanonz
   work: Web Developer &amp; Designer
   location: Shenzhen, China
+
+# Disqus 
+disqus:
+  enable: true
+  shortname: sanonz    #your name
+  count: true
 ```
 
 - **excerpt_link** - 文章列表阅读更多显示文字
