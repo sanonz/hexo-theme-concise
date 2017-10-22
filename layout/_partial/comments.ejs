@@ -1,5 +1,7 @@
 <div class="comments">
-    <div id="disqus_thread"></div>
+    <div id="disqus_thread">
+        <p class="comment-tips">国内查看评论需要代理~</p>
+    </div>
     <script>
     var disqus_config = function () {
       this.language = 'zh';
@@ -7,13 +9,13 @@
       this.page.title = '<%= page.title %>';
       this.page.identifier = '<%= page.path %>';
     };
-    setTimeout(function() { // DON'T EDIT BELOW THIS LINE
+    (function() { // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');
         s.async = true;
         s.src = 'https://sanonz.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
-    }, 1000);
+    })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
