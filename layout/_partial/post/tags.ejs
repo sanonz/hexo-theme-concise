@@ -1,0 +1,10 @@
+<% if( post.tags && post.tags.length ) { %>
+<div class="article-tag-list">
+    <i class="icon-tag"></i>
+    <%- list_tags(post.tags, {
+        style: false,
+        class: 'article-tag',
+        show_count: false
+    }) %>
+</div>
+<% } %>

@@ -1,0 +1,83 @@
+@import (reference) './vars.less';
+
+.app {
+    height: 100%;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    .nav, .aside {
+        float: left;
+    }
+}
+
+@content-vertical: 15px;
+@content-horizontal: 30px;
+
+.content {
+    margin-left: @size-nav-width + @size-aside-width;
+    padding: @content-vertical @content-horizontal;
+    min-height: calc(~'100% -' @size-footer-height + @content-horizontal);
+    overflow-x: hidden;
+    overflow-y: auto;
+    .animation(fade-in-down 0.6s 0.6s both);
+}
+
+.clearfix:after {
+    content: "\200B";
+    display: block;
+    height: 0;
+    clear: both;
+}
+.vm {
+    vertical-align: middle;
+}
+
+
+.keyframes(fade-in; {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }    
+});
+.keyframes(fade-in-down, {
+    from {
+        opacity: 0;
+        .transform(translate3d(0, -10px, 0));
+    }
+    to {
+        opacity: 1;
+        .transform(none);
+    }    
+});
+.keyframes(fade-in-left, {
+    from {
+        opacity: 0;
+        .transform(translate3d(10px, 0, 0));
+    }
+    to {
+        opacity: 1;
+        .transform(none);
+    }    
+});
+
+@media screen and (max-width: @size-mobile-screen-width) {
+    .header {
+        position: none;
+        position: static;
+
+        .nav, .aside {
+            float: none;
+        }
+    }
+    .content {
+        margin-left: 0;
+        padding: 10px 15px;
+    }
+}

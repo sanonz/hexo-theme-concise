@@ -1,0 +1,8 @@
+<article class="archive-article archive-type-<%= post.layout %>">
+    <div class="archive-article-inner">
+        <header class="archive-article-header">
+            <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+            (<%- partial('post/date', {icon: false, date_format: 'M/D'}) %>)
+        </header>
+    </div>
+</article>

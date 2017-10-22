@@ -1,0 +1,135 @@
+@import (reference) './vars.less';
+@import (reference) './mixin.less';
+
+.article {
+    padding-bottom: 42px;
+
+    .article-date {
+        float: left;
+        display: block;
+    }
+    .article-tag-list {
+        float: left;
+        margin-left: 32px;
+    }
+}
+.article-header {
+    padding-bottom: 10px;
+    font-size: 26px;
+
+    h1 {
+        a {
+            color: @color-primary;
+        }
+    }
+}
+.article-meta {
+    padding-top: 8px;
+    font-size: 14px;
+}
+.article-date {
+    color: @color-muted;
+
+    &:hover {
+        color: @color-primary;
+    }
+}
+.article-tag-list {
+    color: @color-muted;
+    list-style-type: none;
+    overflow: hidden;
+}
+.article-tag-link {
+    margin: 0 6px;
+    color: @color-muted;
+
+    &:hover {
+        color: @color-primary;
+    }
+}
+
+.article-more-link {
+    text-align: right;
+
+    a {
+        display: inline-block;
+        padding: 8px 16px;
+        color: @color-muted;
+        line-height: 100%;
+        border: 1px solid @color-border;
+        border-radius: 4px;
+        .transition(all 0.3s ease);
+
+        &:hover {
+            text-decoration: none;
+            background-color: #f7f7f7;
+            border-color: #dedede;
+        }
+    }
+}
+
+.toc {
+    padding: 20px;
+    line-height: 20px;
+    list-style-type: none;
+}
+.toc-item {
+    padding: 4px 0;
+}
+.toc-link {
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    color: #585858;
+
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 2px;
+        height: 100%;
+        line-height: 0;
+        font-size: 0;
+        background-color: @color-primary;
+        opacity: 0\9;
+        .transform(scale(0));
+        .transition(transform 0.3s ease);
+    }
+    &:hover {
+        color: #2b2b2b;
+
+        &:before {
+            opacity: 1\9;
+            .transform(scale(1));
+        }
+    }
+}
+.toc-number {
+    display: none;
+}
+
+@media screen and (max-width: @size-mobile-screen-width) {
+    .article-meta {
+        font-size: 13px;
+    }
+    .article-tag-link {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .article {
+        padding-bottom: 0;
+
+        .article-date {
+            float: none;
+        }
+        .article-tag-list {
+            float: none;
+            margin-left: 0;
+        }
+    }
+    .article-more-link a {
+        padding: 4px 12px;
+        font-size: 13px;
+    }
+}

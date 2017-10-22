@@ -1,0 +1,22 @@
+<% var last; %>
+<% page.posts.each(function(post, i) { %>
+    <% var year = post.date.year(); %>
+    <% if( last != year ) { %>
+    <% if( last != null ) { %>
+    </div></section>
+    <% } %>
+    <% last = year; %>
+    <section class="archives-wrap">
+    <div class="archive-year-wrap">
+    <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"><%= year %></a>
+    </div>
+    <ol class="archives">
+    <% } %>
+
+    <li class="archive-section-item">
+        <%- partial('_partial/archive', {post: post}) %>
+    </li>
+<% }) %>
+<% if (page.posts.length){ %>
+</ol></section>
+<% } %>

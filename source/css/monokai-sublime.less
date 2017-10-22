@@ -1,0 +1,120 @@
+.highlight {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    font-size: 14px;
+    line-height: 16px;
+    background-color: #272822;
+
+    .gutter {
+        pre {
+            width: 40px;
+            color: #90908a;
+            text-align: center;
+        }
+    }
+    .line {
+        min-height: 20px;
+    }
+
+    &,
+    .tag,
+    .subst {
+        color: #f8f8f2;
+    }
+
+    .strong,
+    .emphasis {
+        color: #a8a8a2;
+    }
+
+    .bullet,
+    .quote,
+    .number,
+    .regexp,
+    .literal,
+    .link {
+        color: #ae81ff;
+    }
+
+    .code,
+    .title,
+    .section,
+    .selector-class {
+        color: #fff;
+    }
+
+    .strong {
+        font-weight: bold
+    }
+
+    .emphasis {
+        font-style: italic
+    }
+
+    .keyword,
+    .selector-tag,
+    .name {
+        color: #f92672;
+    }
+
+    .attr {
+        color: #e6db74;
+    }
+
+    .symbol,
+    .attribute {
+        color: #66d9ef
+    }
+
+    .params {
+        color: #fd9720;
+    }
+
+    .class .title,
+    .function .title {
+        color: #a6e22e;
+    }
+
+    .string,
+    .type,
+    .built_in,
+    .builtin-name,
+    .selector-id,
+    .selector-attr,
+    .selector-pseudo,
+    .addition,
+    .variable,
+    .template-variable {
+        color: #e6db74
+    }
+
+    .comment,
+    .deletion,
+    .meta {
+        color: #75715e
+    }
+}
+
+.markdown-body .highlight {
+    table {
+        margin-bottom: 0;
+
+        tr {
+            background-color: transparent;
+            border-top: none;
+        }
+        td {
+            padding: 0;
+            border: none;
+        }
+    }
+    pre {
+        padding: 0;
+        overflow: auto;
+        font-size: inherit;
+        line-height: inherit;
+        background-color: transparent;
+        border-radius: 0;
+    }
+}

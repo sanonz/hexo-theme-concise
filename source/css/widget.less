@@ -1,0 +1,21 @@
+@import (reference) './vars.less';
+
+.widget-wrap {
+    padding: 15px;
+}
+.widget-title {
+    font-size: 1em;
+    font-weight: normal;
+}
+.widget {
+    a {
+        color: fade(@color-primary, 80%);
+
+        &:hover {
+            color: @color-primary;
+        }
+    }
+    ul {
+        list-style-type: none;
+    }
+}

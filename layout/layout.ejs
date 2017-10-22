@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+
+    <%
+    var title = page.title;
+    if( is_archive() ) {
+        title = __('archive_a');
+        if( is_month() ) {
+            title += ': ' + page.year + '/' + page.month;
+        } else if( is_year() ) {
+            title += ': ' + page.year;
+        }
+    } else if( is_category() ) {
+            title = __('category') + ': ' + page.category;
+    } else if( is_tag() ) {
+        title = __('tag') + ': ' + page.tag;
+    }
+    %>
+
+    <%
+    var description = config.description;
+    if( is_post() ) {
+        description = strip_html(page.content).substr(0, 1024);
+    }
+    %>
+
+    <title><% if( title ) { %><%= title %> | <% } %><%= config.title %></title>
+    <meta name="author" content="<%= config.author %>" />
+    <meta name="version" content="1.0.0" />
+    <meta name="keywords" content="<%= config.keywords %>" />
+    <meta name="description" content="<%= description %>" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <meta name="baidu-site-verification" content="F0CXvmUgA9" />
+
+    <% if( theme.rss ) { %>
+    <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+    <% } %>
+    <% if( theme.favicon ) { %>
+    <link rel="icon" href="<%- theme.favicon %>">
+    <% } %>
+
+    <%- css('css/style') %>
+</head>
+<body>
+
+    <div class="app">
+        <%- partial('_partial/header') %>
+        <div id="content" class="content"><%- body %></div>
+        <%- partial('_partial/footer') %>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var nodes = {
+                nav: $('#nav'),
+                aside: $('#aside'),
+                navTags: $('#nav-tags')
+            };
+
+            $('#open-panel, #aside-mask').on('click', function() {
+                nodes.aside.toggleClass('panel-show');
+            });
+            $('#nav-tag').on('click', function(event) {
+                event.preventDefault();console.log(nodes.navTags.attr('class'))
+                nodes.navTags.toggleClass('tag-show');console.log(nodes.navTags.attr('class'))
+            }).hover(function() {
+                nodes.navTags.addClass('tag-show');
+            }, function() {
+                nodes.navTags.removeClass('tag-show');
+            });
+        });
+    </script>
+
+</body>
+</html>

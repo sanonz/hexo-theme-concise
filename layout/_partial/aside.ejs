@@ -1,0 +1,36 @@
+<aside id="aside" class="aside">
+    <div id="aside-mask" class="aside-mask"></div>
+    <div id="aside-inner" class="aside-inner">
+        <%- search_form({button: '<i class="icon-search-stroke"></i>'}) %>
+
+        <% var t = null %>
+        <% if( is_post() ) { %>
+        <% t = toc(page.content) %>
+        <% } %>
+
+        <% if( t ) { %>
+        <%- t %>
+        <% } else { %>
+        <div class="author-meta">
+            <div class="author-avatar">
+                <a href="<%- url_for() %>">
+                    <img src="/images/avatar.jpg" title="Sanonz">
+                </a>
+            </div>
+            <div class="author-name"><%= theme.author.name %></div>
+            <div class="author-work"><%- theme.author.work %></div>
+            <div class="author-location">
+                <i class="icon-location vm"></i>
+                <span class="vm"><%= theme.author.location %></span>
+            </div>
+            <div class="author-thread-wrap">
+                <div class="author-threads clearfix">
+                    <a class="thread-item" href="https://github.com/sanonz" target="_blank"><i class="icon-github"></i></a>
+                    <a class="thread-item" href="http://m.timegoto.com" target="_blank"><i class="icon-circle-more"></i></a>
+                    <a class="thread-item" href="https://twitter.com/sanonze" target="_blank"><i class="icon-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <% } %>
+    </div>
+</aside>

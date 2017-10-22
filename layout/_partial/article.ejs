@@ -1,0 +1,34 @@
+<article class="article" itemscope itemprop="blogPost">
+    <% if( post.title ) { %>
+    <header class="article-header">
+        <% if( view ) { %>
+        <h1 itemprop="name">
+            <%= post.title %>
+        </h1>
+        <% } else { %>
+        <h1 itemprop="name">
+            <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+        </h1>
+        <% } %>
+        <div class="article-meta clearfix">
+            <%- partial('post/date', {icon: true, date_format: null}) %>
+            <%- partial('post/tags') %>
+        </div>
+    </header>
+    <% } %>
+    <section class="article-body markdown-body">
+        <% if( !view && post.excerpt ) { %>
+        <%- post.excerpt %>
+        <% if( theme.excerpt_link ) { %>
+        <p class="article-more-link">
+            <a href="<%- url_for(post.path) %>#more">
+                <span class="vm"><%= theme.excerpt_link %></span>
+                <i class="icon-arrow-double-right vm"></i>    
+            </a>
+        </p>
+        <% } %>
+        <% } else { %>
+        <%- post.content %>
+        <% } %>
+    </section>
+</article>
