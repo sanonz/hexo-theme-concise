@@ -1,12 +1,11 @@
 # Concise
 
-Hexo 简约主题
+Hexo 简约主题，响应式设计支持 PC、手机等设备，代码高亮使用 monokai-sublime 风格，[在线预览](https://sanonz.github.io/)。
 
-- [Preview](https://sanonz.github.io/)
+![Preview](preview.png)
 
-## Installation
 
-### Install
+### 安装
 
 ``` bash
 $ git clone https://github.com/sanonz/hexo-theme-concise.git themes/concise
@@ -16,7 +15,7 @@ $ git clone https://github.com/sanonz/hexo-theme-concise.git themes/concise
 
 ### 切换
 
-Modify `theme` setting in `_config.yml` to `concise`.
+在 `_config.yml` 配置文件中 把 `theme` 值改为 `concise`.
 
 ### 更新
 
