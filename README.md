@@ -15,7 +15,8 @@ $ git clone https://github.com/sanonz/hexo-theme-concise.git themes/concise
 
 ### 切换
 
-在 `_config.yml` 配置文件中 把 `theme` 值改为 `concise`.
+- 在 `_config.yml` 配置文件中 把 `theme` 值改为 `concise`.
+- 复制 `themes/concise/_config.example.yml` 配置文件为 `themes/concise/_config.yml`
 
 ### 更新
 
@@ -25,6 +26,8 @@ git pull
 ```
 
 ## 配置
+
+修改 `themes/concise/_config.yml` 配置文件
 
 ``` yml
 # Content

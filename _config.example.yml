@@ -32,7 +32,7 @@ archive_type: 'monthly'
 # Disqus 
 disqus:
   enable: true
-  shortname: sanonz    #your name
+  shortname: name    #your name
   count: true
 
 # Miscellaneous
