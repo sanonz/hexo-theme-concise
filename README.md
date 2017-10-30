@@ -5,18 +5,30 @@ Hexo 简约主题，响应式设计支持 PC、手机等设备，代码高亮使
 ![Preview](preview.png)
 
 
+### 前提
+
+因为这个主题使用了 less 编译，Hexo 默认的编译器为 [hexo-renderer-stylus](https://github.com/hexojs/hexo-renderer-stylus) 要切换为 [hexo-renderer-less](https://github.com/hexojs/hexo-renderer-less)
+```bash
+$ npm install hexo-renderer-less --save
+```
+
+如果你不需要 `hexo-renderer-stylus` 可以把它卸载掉
+```bash
+$ npm uninstall hexo-renderer-stylus --save
+```
+
 ### 安装
 
 ``` bash
 $ git clone https://github.com/sanonz/hexo-theme-concise.git themes/concise
 ```
 
-**Concise requires Hexo 2.4 and above.**
+**Concise 主题需要 Hexo 2.4 或者更高的版本**
 
 ### 切换
 
-- 在 `_config.yml` 配置文件中 把 `theme` 值改为 `concise`.
-- 复制 `themes/concise/_config.example.yml` 配置文件为 `themes/concise/_config.yml`
+1. 在 `_config.yml` 配置文件中 把 `theme` 值改为 `concise`.
+2. 复制 `themes/concise/_config.example.yml` 配置文件为 `themes/concise/_config.yml`
 
 ### 更新
 
@@ -48,3 +60,12 @@ disqus:
 
 - **excerpt_link** - 文章列表阅读更多显示文字
 - **sidebar** - 配置博主个人信息，显示在边栏
+
+可以关闭单个文章的评论，把 `comments` 设置为 `false`，默认为 `true`
+```md
+---
+title: Hello World
+date: 2017-10-20 20:00:00
+comments: true
+---
+```
