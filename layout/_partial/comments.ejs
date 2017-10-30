@@ -1,21 +1,21 @@
 <div class="comments">
-    <div id="disqus_thread">
-        <p class="comment-tips">国内查看评论需要代理~</p>
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" data-id="city" data-uid="<%= theme.livere.uid %>">
+        <script type="text/javascript">
+        var livereOptions = {refer: '<%= page.path %>'};
+        (function(d, s) {
+            var j, e = d.getElementsByTagName(s)[0];
+
+            if (typeof LivereTower === 'function') { return; }
+
+            j = d.createElement(s);
+            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            j.async = true;
+
+            e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+        </script>
+        <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
     </div>
-    <script>
-    var disqus_config = function () {
-      this.language = 'zh';
-      this.page.url = '<%= page.permalink %>';
-      this.page.title = '<%= page.title %>';
-      this.page.identifier = '<%= page.path %>';
-    };
-    (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.async = true;
-        s.src = 'https://sanonz.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <!-- City版安装代码已完成 -->
 </div>

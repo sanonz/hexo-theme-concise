@@ -12,28 +12,27 @@ author:
   name: Sanonz
   work: Web Developer &amp; Designer
   location: Shenzhen, China
-widgets:
-- category
-- tag
-- tagcloud
-- archive
-- recent_posts
+# widgets:
+# - category
+# - tag
+# - tagcloud
+# - archive
+# - recent_posts
 
 # display widgets at the bottom of index pages (pagination == 2)
-index_widgets:
+# index_widgets:
 # - category
 # - tagcloud
 # - archive
 
 # widget behavior
-show_count: false
-archive_type: 'monthly'
+# show_count: false
+# archive_type: 'monthly'
 
-# Disqus 
-disqus:
+# Livere 
+livere:
   enable: true
-  shortname: name    #your name
-  count: true
+  uid: uid
 
 # Miscellaneous
 google_analytics:

@@ -1,3 +1,12 @@
 <% page.posts.each(function(post) { %>
     <%- partial('_partial/article', {post: post, view: false}) %>
 <% }) %>
+
+<% if (page.total > 1){ %>
+<nav class="page-nav">
+    <%- paginator({
+      prev_text: '&laquo; ' + __('prev'),
+      next_text:  __('next') + ' &raquo;'
+    }) %>
+</nav>
+<% } %>

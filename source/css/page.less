@@ -1,0 +1,23 @@
+@import (reference) './vars.less';
+
+.page-nav {
+    padding: 20px 0;
+    text-align: center;
+    line-height: 1;
+
+    .page-number, .extend {
+        display: inline-block;
+        margin: 0 6px;
+        padding: 4px 10px;
+        color: @color-primary;
+        border: 1px solid @color-active;
+        .transition(all 0.3s ease);
+    }
+    .current, .page-number:hover, .extend:hover {
+        color: @color-white;
+        background-color: @color-primary;
+    }
+    .space {
+        margin: 0 4px;
+    }
+}

@@ -51,17 +51,17 @@ author:
   work: Web Developer &amp; Designer
   location: Shenzhen, China
 
-# Disqus 
-disqus:
+# Livere 
+livere:
   enable: true
-  shortname: sanonz    #your name
-  count: true
+  uid: uid
 ```
 
 - **excerpt_link** - 文章列表阅读更多显示文字
 - **sidebar** - 配置博主个人信息，显示在边栏
+- **Livere** - 配置评论，需要自行注册 [Livere](https://livere.com/) 然后获取 uid 填写到这里
 
-可以关闭单个文章的评论，把 `comments` 设置为 `false`，默认为 `true`
+可以关闭单个文章的评论，把 `comments` 设置为 `false`，默认为 `true`，例如：
 ```md
 ---
 title: Hello World

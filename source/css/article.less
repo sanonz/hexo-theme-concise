@@ -12,14 +12,21 @@
         float: left;
         margin-left: 32px;
     }
+    .article-more-link {
+        margin-bottom: 30px;
+    }
 }
 .article-header {
-    padding-bottom: 10px;
     font-size: 26px;
 
     h1 {
         a {
             color: @color-primary;
+            .transition(all 0.3s ease);
+
+            &:hover {
+                color: @color-hover;
+            }
         }
     }
 }
@@ -44,7 +51,7 @@
     color: @color-muted;
 
     &:hover {
-        color: @color-primary;
+        color: @color-hover;
     }
 }
 
@@ -53,17 +60,19 @@
 
     a {
         display: inline-block;
-        padding: 8px 16px;
+        padding: 6px 12px;
         color: @color-muted;
-        line-height: 100%;
+        font-size: 14px;
+        line-height: 1;
         border: 1px solid @color-border;
         border-radius: 4px;
         .transition(all 0.3s ease);
 
         &:hover {
-            text-decoration: none;
+            color: @color-hover;
             background-color: #f7f7f7;
             border-color: #dedede;
+            text-decoration: none;
         }
     }
 }
@@ -126,6 +135,7 @@
         .article-tag-list {
             float: none;
             margin-left: 0;
+            margin-top: 8px;
         }
     }
     .article-more-link a {
