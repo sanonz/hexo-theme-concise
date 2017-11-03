@@ -29,10 +29,11 @@ author:
 # show_count: false
 # archive_type: 'monthly'
 
-# Livere 
-livere:
+# Disqus 
+disqus:
   enable: true
-  uid: uid
+  shortname: name    #your name
+  # count: true
 
 # Miscellaneous
 google_analytics:
