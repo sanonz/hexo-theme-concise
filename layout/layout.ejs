@@ -22,7 +22,7 @@
     <%
     var description = config.description;
     if( is_post() ) {
-        description = strip_html(page.content).substr(0, 1024);
+        description = strip_html(page.content).substr(0, 250);
     }
     %>
 
