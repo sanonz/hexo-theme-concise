@@ -3,7 +3,7 @@
     <% var year = post.date.year(); %>
     <% if( last != year ) { %>
     <% if( last != null ) { %>
-    </div></section>
+    </ol></section>
     <% } %>
     <% last = year; %>
     <section class="archives-wrap">
@@ -19,4 +19,13 @@
 <% }) %>
 <% if (page.posts.length){ %>
 </ol></section>
+<% } %>
+
+<% if (page.total > 1){ %>
+<nav class="page-nav">
+    <%- paginator({
+      prev_text: '&laquo; ' + __('prev'),
+      next_text:  __('next') + ' &raquo;'
+    }) %>
+</nav>
 <% } %>

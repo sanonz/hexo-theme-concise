@@ -99,7 +99,13 @@
     }
     .tag-list {
         margin-top: 14px;
-        overflow: hidden;
+        height: 232px;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar-thumb {
+            background-color: fade(@color-white, 95%);
+        }
     }
     .tag-list-item {
         float: left;

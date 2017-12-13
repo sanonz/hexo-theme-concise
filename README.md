@@ -42,6 +42,16 @@ git pull
 修改 `themes/concise/_config.yml` 配置文件
 
 ``` yml
+# Header
+menu:
+  首页: /
+  前端: categories/front-end
+  后端: back-end
+  标签: javascript:;
+  归档: archives
+  订阅: atom.xml
+  关于: about
+
 # Content
 excerpt_link: 阅读更多
 
@@ -54,13 +64,20 @@ author:
 # Disqus 
 disqus:
   enable: true
-  shortname: sanonz    #your name
+  shortname: name    #your name
   # count: true
+
+# 友盟统计
+umeng:
+  prefix: s13
+  id: 1234567890
 ```
 
+- **menu** - 导航列表
 - **excerpt_link** - 文章列表阅读更多显示文字
 - **sidebar** - 配置博主个人信息，显示在边栏
-- **Disqus** - 配置评论，需要自行注册 [Disqus](https://disqus.com/) 然后获取 shortname 填写到这里
+- **disqus** - 配置评论，需要自行注册 [Disqus](https://disqus.com/) 然后获取 shortname 填写到这里
+- **umeng** - 配置站点访问统计，需要自行注册 [Umeng](http://web.umeng.com/main.php?c=user&a=index) 然后获取域名前缀与 ID 填写到这里
 
 可以关闭单个文章的评论，把 `comments` 设置为 `false`，默认为 `true`，例如：
 ```md

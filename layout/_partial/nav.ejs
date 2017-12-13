@@ -3,33 +3,22 @@
 
     <nav class="nav-inner">
 
-        <li class="nav-item<% if( is_home() ) { %> active<% } %>">
-            <a class="nav-link" href="<%- url_for('/') %>">首页</a>
-        </li>
-        <li class="nav-item<% if( is_current('categories/front-end') ) {  %> active<% } %>">
-            <a class="nav-link" href="<%- url_for('categories/front-end') %>">前端</a>
-        </li>
-        <li class="nav-item<% if( is_current('categories/back-end') ) {  %> active<% } %>">
-            <a class="nav-link" href="<%- url_for('categories/back-end') %>">后端</a>
-        </li>
-
+        <% for (var i in theme.menu){ %>
+        <% if (theme.menu[i]==='javascript:;') { %>
         <li class="nav-item nav-item-tag">
-            <a id="nav-tag" class="nav-link" href="#">标签</a>
+            <a id="nav-tag" class="nav-link" href="#"><%= i %></a>
             <div id="nav-tags" class="nav-tag-wrap">
                 <i class="nav-tag-arrow"></i>
                 <%- partial('_widget/tag') %>
             </div>
         </li>
-
-        <li class="nav-item<% if( is_archive() ) { %> active<% } %>">
-            <a class="nav-link" href="<%- url_for('archives') %>">归档</a>
+        <% } else { %>
+        <li class="nav-item<% if( theme.menu[i] === '/' && is_home() || is_current(theme.menu[i]) ) {  %> active<% } %>">
+            <a class="nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="<%- url_for('atom.xml') %>">订阅</a>
-        </li>
-        <li class="nav-item<% if( is_current('about') ) {  %> active<% } %>">
-            <a class="nav-link" href="<%- url_for('about') %>">关于</a>
-        </li>
+        <% } %>
+        <% } %>
+        
 
     </nav>
 </div>

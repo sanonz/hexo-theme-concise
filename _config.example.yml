@@ -1,8 +1,12 @@
 # Header
 menu:
-  Home: /
-  Archives: /archives
-rss: /atom.xml
+  首页: /
+  前端: categories/front-end
+  后端: back-end
+  标签: javascript:;
+  归档: archives
+  订阅: atom.xml
+  关于: about
 
 # Content
 excerpt_link: 阅读更多
@@ -34,6 +38,11 @@ disqus:
   enable: true
   shortname: name    #your name
   # count: true
+
+# 友盟统计
+umeng:
+  prefix: s13
+  id: 1234567890
 
 # Miscellaneous
 google_analytics:
