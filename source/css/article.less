@@ -90,6 +90,17 @@
 }
 .toc-item {
     padding: 4px 0;
+
+    &.active {
+        > .toc-link {
+            color: #2b2b2b;
+
+            &:before {
+                opacity: 1\9;
+                .transform(scale(1));
+            }
+        }
+    }
 }
 .toc-link {
     position: relative;
@@ -110,14 +121,6 @@
         opacity: 0\9;
         .transform(scale(0));
         .transition(transform 0.3s ease);
-    }
-    &:hover {
-        color: #2b2b2b;
-
-        &:before {
-            opacity: 1\9;
-            .transform(scale(1));
-        }
     }
 }
 .toc-number {
