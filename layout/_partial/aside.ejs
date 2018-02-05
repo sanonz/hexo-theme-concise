@@ -12,11 +12,13 @@
         <%- t %>
         <% } else { %>
         <div class="author-meta">
+            <% if( theme.author.avatar_url ) { %>
             <div class="author-avatar">
                 <a href="<%- url_for() %>">
-                    <img src="/images/avatar.jpg" title="Sanonz">
+                    <img src="<%= theme.author.avatar_url %>" title="Sanonz">
                 </a>
             </div>
+            <% } %>
             <div class="author-name"><%= theme.author.name %></div>
             <div class="author-work"><%- theme.author.work %></div>
             <div class="author-location">
