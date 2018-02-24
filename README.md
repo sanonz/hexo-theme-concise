@@ -60,6 +60,7 @@ author:
   name: Sanonz
   work: Web Developer &amp; Designer
   location: Shenzhen, China
+  avatar_url: /images/avatar.jpg
 
 # Disqus 
 disqus:
