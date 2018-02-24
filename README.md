@@ -62,6 +62,11 @@ author:
   location: Shenzhen, China
   avatar_url: /images/avatar.jpg
 
+links:
+  github: https://github.com/sanonz
+  more: http://m.timegoto.com/user/1
+  twitter: https://twitter.com/sanonze
+
 # Disqus 
 disqus:
   enable: true

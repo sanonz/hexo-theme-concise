@@ -25,13 +25,21 @@
                 <i class="icon-location vm"></i>
                 <span class="vm"><%= theme.author.location %></span>
             </div>
+            <% if( theme.links && theme.links.length ) { %>
             <div class="author-thread-wrap">
                 <div class="author-threads clearfix">
-                    <a class="thread-item" href="https://github.com/sanonz" target="_blank"><i class="icon-github"></i></a>
-                    <a class="thread-item" href="http://m.timegoto.com/user/1" target="_blank"><i class="icon-circle-more"></i></a>
-                    <a class="thread-item" href="https://twitter.com/sanonze" target="_blank"><i class="icon-twitter"></i></a>
+                    <% if( theme.links.github ) { %>
+                    <a class="thread-item" href="<%= theme.links.github %>" target="_blank"><i class="icon-github"></i></a>
+                    <% } %>
+                    <% if( theme.links.more ) { %>
+                    <a class="thread-item" href="<%= theme.links.more %>" target="_blank"><i class="icon-circle-more"></i></a>
+                    <% } %>
+                    <% if( theme.links.twitter ) { %>
+                    <a class="thread-item" href="<%= theme.links.twitter %>" target="_blank"><i class="icon-twitter"></i></a>
+                    <% } %>
                 </div>
             </div>
+            <% } %>
         </div>
         <% } %>
     </div>
