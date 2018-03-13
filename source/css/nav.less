@@ -7,7 +7,7 @@
     z-index: 80;
     width: @size-nav-width;
     height: 100%;
-    background-color: @color-black;
+    background-color: @color-board;
     .animation(fade-in 1.6s both);
 }
 .nav-inner {
@@ -25,7 +25,7 @@
     list-style: none;
 
     &.active {
-        background-color: #3a3a3a;
+        background-color: #676767;
 
         .nav-link:after {
             display: block;
@@ -41,14 +41,14 @@
     &:after {
         display: none;
         position: absolute;
-        top: 0;
+        top: 1px;
         right: -1px;
         content: '';
         font-size: 0;
         line-height: 0;
         width: 1px;
         height: 100%;
-        background-color: @color-black;
+        background-color: @color-board;
     }
     &:hover {
         background-color: @color-active;
