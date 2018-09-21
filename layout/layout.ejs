@@ -57,17 +57,45 @@
         $(function() {
             var nodes = {
                 nav: $('#nav'),
-                aside: $('#aside')
+                aside: $('#aside'),
+                asideInner: $('#aside-inner'),
+                navInner: $('#nav-inner')
             };
 
-            $('#open-panel, #aside-mask').on('click', function() {
-                nodes.aside.toggleClass('panel-show');
+            var doing = false;
+            nodes.asideInner.on('webkitAnimationEnd mozAnimationEnd oAnimationEnd oanimationend animationend', function() {
+                if (nodes.aside.hasClass('mobile-open')) {
+                    nodes.aside.removeClass('mobile-open');
+                } else {
+                    nodes.aside.removeClass('mobile-close panel-show');
+                }
+                doing = false;
             });
+            $('#open-panel, #aside-mask').on('click', function() {
+                if (doing) {
+                    return;
+                }
+                
+                if (nodes.aside.hasClass('panel-show')) {
+                    nodes.aside.addClass('mobile-close');
+                } else {
+                    nodes.aside.addClass('mobile-open panel-show');
+                }
+            });
+            $('#open-menus').on('click', function() {
+                nodes.navInner.slideToggle();
+            });
+
+            if (window.innerWidth <= 960) {
+                setTimeout(() => {
+                    nodes.navInner.slideUp();
+                }, 3000);
+            }
         });
     </script>
     <% if (is_post()) { %>
         <script type="text/javascript" src="/js/scrollspy.min.js"></script>
-        <script type="text/javascript"></script>
+        <script type="text/javascript">
         $(document.body).scrollspy({target: '#aside-inner'});
         </script>
     <% } %>

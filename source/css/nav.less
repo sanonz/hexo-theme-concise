@@ -14,7 +14,6 @@
     position: absolute;
     top: 50%;
     left: 0;
-    z-index: 80;
     width: 100%;
     font-size: 16px;
     text-align: center;
@@ -22,40 +21,13 @@
     .transform(translateY(-50%));
 }
 .nav-item {
-    list-style: none;
-
-    &.active {
-        background-color: #676767;
-
-        .nav-link:after {
-            display: block;
-        }
-    }
-}
-.nav-link {
     position: relative;
     display: block;
     color: @color-white;
     .transition(background-color 0.4s ease);
 
-    &:after {
-        display: none;
-        position: absolute;
-        top: 1px;
-        right: -1px;
-        content: '';
-        font-size: 0;
-        line-height: 0;
-        width: 1px;
-        height: 100%;
-        background-color: @color-board;
-    }
-    &:hover {
-        background-color: @color-active;
-
-        &:after {
-            display: block;
-        }
+    &.active {
+        background-color: #676767;
     }
 }
 
@@ -120,17 +92,28 @@
         border-width: 1px;
         border-style: solid;
 
-        &:hover {
+        &:hover,
+        &:active {
             color: #e6e6e6;
             background-color: #212121;
         }
     }
 }
 
-.open-panel {
+.nav-mobile {
     display: none;
+}
+.nav-mobile-item {
+    .flex-item();
+}
+.nav-mobile-title {
+    color: @color-white;
+    line-height: @size-mobile-nav-height;
+    .ellipsis();
+}
+.open-panel {
     width: @size-mobile-nav-height;
-    margin-left: 10px;
+    padding: 0 10px;
     color: @color-white;
     font-size: 18px;
     line-height: @size-mobile-nav-height;
@@ -143,17 +126,14 @@
 @media screen and (max-width: @size-mobile-screen-width) {
     .nav {
         width: auto;
-        height: @size-mobile-nav-height;
+        height: auto;
     }
     .nav-inner {
-        position: fixed;
-        top: auto;
-        bottom: 0;
-        width: 100%;
+        position: static;
         height: @size-mobile-nav-height;
         font-size: 13px;
         line-height: @size-mobile-nav-height;
-        background-color: @color-black;
+        background-color: @color-primary;
         .flexbox();
         .transform(none);
     }
@@ -181,7 +161,9 @@
         }
     }
 
-    .open-panel {
-        display: inline-block;
+    .nav-mobile {
+        height: @size-mobile-nav-height;
+        .flexbox();
+        .justify-content(space-between);
     }
 }

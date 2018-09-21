@@ -2,7 +2,8 @@
 @import (reference) './mixin.less';
 
 
-.app {
+
+html, body, .app {
     height: 100%;
 }
 
@@ -11,6 +12,7 @@
     top: 0;
     left: 0;
     bottom: 0;
+    z-index: 90;
     width: @size-nav-width + @size-aside-width;
 
     .nav, .aside {
@@ -91,6 +93,9 @@
 });
 
 @media screen and (max-width: @size-mobile-screen-width) {
+    html, body, .app {
+        height: auto;
+    }
     .header {
         position: none;
         position: static;
@@ -103,5 +108,7 @@
     .content {
         margin-left: 0;
         padding: 10px 15px;
+        min-height: calc(~'100vh -' @size-mobile-nav-height * 2 + @size-footer-height + 25px);
+        overflow: initial;
     }
 }

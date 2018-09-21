@@ -1,24 +1,13 @@
 <div id="nav" class="nav">
-    <button id="open-panel" class="open-panel"><i class="icon-library"></i></button>
+    <div class="nav-mobile">
+        <button id="open-panel" class="open-panel nav-mobile-item"><i class="icon-documents"></i></button>
+        <h1 class="nav-mobile-title nav-mobile-item"><%= config.title %></h1>
+        <button id="open-menus" class="open-panel nav-mobile-item"><i class="icon-library"></i></button>
+    </div>
 
-    <nav class="nav-inner">
-
+    <nav id="nav-inner" class="nav-inner">
         <% for (var i in theme.menu){ %>
-        <% if (theme.menu[i]==='javascript:;') { %>
-        <li class="nav-item nav-item-tag">
-            <a id="nav-tag" class="nav-link" href="#"><%= i %></a>
-            <div id="nav-tags" class="nav-tag-wrap">
-                <i class="nav-tag-arrow"></i>
-                <%- partial('_widget/tag') %>
-            </div>
-        </li>
-        <% } else { %>
-        <li class="nav-item<% if( theme.menu[i] === '/' && is_home() || is_current(theme.menu[i]) ) {  %> active<% } %>">
-            <a class="nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
-        </li>
+            <a class="nav-item<% if( theme.menu[i] === '/' && is_home() || is_current(theme.menu[i]) ) {  %> active<% } %>" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
         <% } %>
-        <% } %>
-        
-
     </nav>
 </div>
