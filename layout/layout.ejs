@@ -46,41 +46,31 @@
 </head>
 <body>
 
-    <div class="app">
+    <main class="app">
         <%- partial('_partial/header') %>
         <div id="content" class="content"><%- body %></div>
         <%- partial('_partial/footer') %>
-    </div>
+    </main>
 
     <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.9.0/jquery.min.js"></script>
-    <% if( is_post() ) { %>
-    <script type="text/javascript" src="/js/scrollspy.min.js"></script>
-    <% } %>
     <script type="text/javascript">
         $(function() {
             var nodes = {
                 nav: $('#nav'),
-                aside: $('#aside'),
-                navTags: $('#nav-tags')
+                aside: $('#aside')
             };
 
             $('#open-panel, #aside-mask').on('click', function() {
                 nodes.aside.toggleClass('panel-show');
             });
-            $('#nav-tag').on('click', function(event) {
-                event.preventDefault();console.log(nodes.navTags.attr('class'))
-                nodes.navTags.toggleClass('tag-show');console.log(nodes.navTags.attr('class'))
-            })/*.hover(function() {
-                nodes.navTags.addClass('tag-show');
-            }, function() {
-                nodes.navTags.removeClass('tag-show');
-            });*/
-
-            <% if (is_post()) { %>
-            $(document.body).scrollspy({target: '#aside-inner'});
-            <% } %>
         });
     </script>
+    <% if (is_post()) { %>
+        <script type="text/javascript" src="/js/scrollspy.min.js"></script>
+        <script type="text/javascript"></script>
+        $(document.body).scrollspy({target: '#aside-inner'});
+        </script>
+    <% } %>
 
 </body>
 </html>

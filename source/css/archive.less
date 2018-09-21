@@ -1,17 +1,17 @@
 @import (reference) './vars.less';
 
-.archive-year {
-    color: @color-primary;
-    font-size: 2em;
-}
 .archives {
     padding-left: 1.75em;
 
-    a {
+    .archive-article-link {
         color: #4a4a4a;
 
         &:hover {
             color: @color-hover;
         }
+    }
+    .archive-article-date {
+        color: @color-muted;
+        margin-left: 8px;
     }
 }

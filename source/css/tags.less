@@ -1,6 +1,44 @@
 @import (reference) './vars.less';
 
-.article-tag-list {
-    font-size: 0.75em;
-    list-style-type: none;
+// tag 列表页面样式
+.tags-wrap {
+    .tag-list {
+        color: @color-primary;
+        line-height: 22px;
+        font-size: 0.8em;
+        list-style: none;
+    }
+    .tag-list-item {
+        float: left;
+        margin-top: 14px;
+        margin-right: 14px;
+        padding-right: 14px;
+        border-radius: 6px;
+        background-color: #f7f7f7;
+        border: 1px solid #ececec;
+
+        &:hover {
+            background-color: #ececec;
+            border-color: #dadada;
+        }
+    }
+    .tag-list-link {
+        display: inline-block;
+        
+        padding: 2px 8px 2px 14px;
+        color: @color-primary;
+        vertical-align: middle;
+    }
+    @count-height: 14px;
+    .tag-list-count {
+        display: inline-block;
+        color: @color-red;
+        border-left: 1px solid @color-red;
+        border-right: 1px solid @color-red;
+        border-radius: @count-height;
+        height: @count-height;
+        line-height: @count-height;
+        padding: 0 2px;
+        vertical-align: middle;
+    }
 }
