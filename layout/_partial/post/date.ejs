@@ -1,4 +1,4 @@
-<a class="article-date" href="<%- url_for(post.path) %>">
+<a class="article-date" href="<%- url || url_for(post.path) %>">
     <% if( icon ) { %>
     <i class="icon-calendar"></i>
     <% } %>
