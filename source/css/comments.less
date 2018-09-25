@@ -1,0 +1,520 @@
+@color_1: #6190e8;
+@color_2: #81a6ed;
+@color_3: #333;
+@color_4: #fff;
+@color_5: #ff3860;
+@color_6: #a1a1a1;
+@background_color_1: #999;
+@background_color_2: #6190e8;
+@background_color_3: #fff;
+@background_color_4: #f2f2f2;
+@background_color_5: #81a6ed;
+@background_color_6: #f6f6f6;
+@background_color_7: #fbfbfb;
+@background_color_8: #f9f9f9;
+@background_color_9: #f6f9fe;
+@border_color_1: #81a6ed;
+@border_top_color_1: #6190e8;
+
+.comments {
+    padding-bottom: 42px;
+}
+
+@-webkit-keyframes gt-kf-rotate {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes gt-kf-rotate {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+.gt-container {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 16px;
+    * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    a {
+        color: @color_1;
+        &:hover {
+            color: @color_2;
+            border-color: @border_color_1;
+        }
+    }
+    a.is--active {
+        color: @color_3;
+        cursor: default !important;
+        &:hover {
+            color: @color_3;
+        }
+    }
+    .hide {
+        display: none !important;
+    }
+    .gt-svg {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        vertical-align: sub;
+        svg {
+            width: 100%;
+            height: 100%;
+            fill: #6190e8;
+        }
+    }
+    .gt-ico {
+        display: inline-block;
+    }
+    .gt-ico-text {
+        margin-left: 0.3125em;
+    }
+    .gt-ico-github {
+        .gt-svg {
+            width: 100%;
+            height: 100%;
+        }
+        svg {
+            fill: inherit;
+        }
+    }
+    .gt-spinner {
+        position: relative;
+        &::before {
+            content: '';
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            position: absolute;
+            top: 3px;
+            width: 0.75em;
+            height: 0.75em;
+            margin-top: -0.1875em;
+            margin-left: -0.375em;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            border-top-color: @border_top_color_1;
+            -webkit-animation: gt-kf-rotate 0.6s linear infinite;
+            animation: gt-kf-rotate 0.6s linear infinite;
+        }
+    }
+    .gt-loader {
+        position: relative;
+        border: 1px solid #999;
+        -webkit-animation: ease gt-kf-rotate 1.5s infinite;
+        animation: ease gt-kf-rotate 1.5s infinite;
+        display: inline-block;
+        font-style: normal;
+        width: 1.75em;
+        height: 1.75em;
+        line-height: 1.75em;
+        border-radius: 50%;
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 50%;
+            margin-top: -0.1875em;
+            margin-left: -0.1875em;
+            width: 0.375em;
+            height: 0.375em;
+            background-color: @background_color_1;
+            border-radius: 50%;
+        }
+    }
+    .gt-avatar {
+        display: inline-block;
+        width: 3.125em;
+        height: 3.125em;
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 3px;
+        }
+    }
+    .gt-avatar-github {
+        width: 3em;
+        height: 3em;
+    }
+    .gt-btn {
+        padding: 0.75em 1.25em;
+        display: inline-block;
+        line-height: 1;
+        text-decoration: none;
+        white-space: nowrap;
+        cursor: pointer;
+        border: 1px solid #6190e8;
+        border-radius: 5px;
+        background-color: @background_color_2;
+        color: @color_4;
+        outline: none;
+        font-size: 0.75em;
+    }
+    .gt-btn-text {
+        font-weight: 400;
+    }
+    .gt-btn-loading {
+        position: relative;
+        margin-left: 0.5em;
+        display: inline-block;
+        width: 0.75em;
+        height: 1em;
+        vertical-align: top;
+    }
+    .gt-btn.is--disable {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+    .gt-btn-login {
+        margin-right: 0;
+    }
+    .gt-btn-preview {
+        background-color: @background_color_3;
+        color: @color_1;
+        &:hover {
+            background-color: @background_color_4;
+            border-color: @border_color_1;
+        }
+    }
+    .gt-btn-public {
+        &:hover {
+            background-color: @background_color_5;
+            border-color: @border_color_1;
+        }
+    }
+    .gt-error {
+        text-align: center;
+        margin: 0.625em;
+        color: @color_5;
+    }
+    .gt-initing {
+        padding: 1.25em 0;
+        text-align: center;
+    }
+    .gt-initing-text {
+        margin: 0.625em auto;
+        font-size: 92%;
+    }
+    .gt-no-init {
+        padding: 1.25em 0;
+        text-align: center;
+    }
+    .gt-link {
+        border-bottom: 1px dotted #6190e8;
+    }
+    .gt-link-counts {
+        text-decoration: none;
+    }
+    .gt-link-project {
+        text-decoration: none;
+    }
+    .gt-meta {
+        margin: 1.25em 0;
+        padding: 1em 0;
+        position: relative;
+        border-bottom: 1px solid #e9e9e9;
+        font-size: 1em;
+        position: relative;
+        z-index: 10;
+        &:before {
+            content: " ";
+            display: table;
+        }
+        &:after {
+            content: " ";
+            display: table;
+            clear: both;
+        }
+    }
+    .gt-counts {
+        margin: 0 0.625em 0 0;
+    }
+    .gt-user {
+        float: right;
+        margin: 0;
+        font-size: 92%;
+        .gt-ico {
+            margin: 0 0 0 0.3125em;
+            svg {
+                fill: inherit;
+            }
+        }
+        .is--poping {
+            .gt-ico {
+                svg {
+                    fill: #6190e8;
+                }
+            }
+        }
+    }
+    .gt-user-pic {
+        width: 16px;
+        height: 16px;
+        vertical-align: top;
+        margin-right: 0.5em;
+    }
+    .gt-user-inner {
+        display: inline-block;
+        cursor: pointer;
+    }
+    .gt-version {
+        color: @color_6;
+        margin-left: 0.375em;
+    }
+    .gt-copyright {
+        margin: 0 0.9375em 0.5em;
+        border-top: 1px solid #e9e9e9;
+        padding-top: 0.5em;
+    }
+    .gt-popup {
+        position: absolute;
+        right: 0;
+        top: 2.375em;
+        background: #fff;
+        display: inline-block;
+        border: 1px solid #e9e9e9;
+        padding: 0.625em 0;
+        font-size: 0.875em;
+        letter-spacing: 0.5px;
+        .gt-action {
+            cursor: pointer;
+            display: block;
+            margin: 0.5em 0;
+            padding: 0 1.125em;
+            position: relative;
+            text-decoration: none;
+        }
+        .gt-action.is--active {
+            &:before {
+                content: '';
+                width: 0.25em;
+                height: 0.25em;
+                background: #6190e8;
+                position: absolute;
+                left: 0.5em;
+                top: 0.4375em;
+            }
+        }
+    }
+    .gt-header {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .gt-header-comment {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        margin-left: 1.25em;
+    }
+    .gt-header-textarea {
+        padding: 0.75em;
+        display: block;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+        min-height: 5.125em;
+        max-height: 15em;
+        border-radius: 5px;
+        border: 1px solid rgba(0,0,0,0.1);
+        font-size: 0.875em;
+        word-wrap: break-word;
+        resize: vertical;
+        background-color: @background_color_6;
+        outline: none;
+        -webkit-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+        &:hover {
+            background-color: @background_color_7;
+        }
+    }
+    .gt-header-preview {
+        padding: 0.75em;
+        border-radius: 5px;
+        border: 1px solid rgba(0,0,0,0.1);
+        background-color: @background_color_6;
+    }
+    .gt-header-controls {
+        position: relative;
+        margin: 0.75em 0 0;
+        &:before {
+            content: " ";
+            display: table;
+        }
+        &:after {
+            content: " ";
+            display: table;
+            clear: both;
+        }
+        .gt-btn {
+            float: right;
+            margin-left: 1.25em;
+        }
+    }
+    .gt-header-controls-tip {
+        font-size: 0.875em;
+        color: @color_1;
+        text-decoration: none;
+        vertical-align: sub;
+    }
+    &:after {
+        content: '';
+        position: fixed;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        opacity: 0;
+    }
+    .gt-comments {
+        padding-top: 1.25em;
+    }
+    .gt-comments-null {
+        text-align: center;
+    }
+    .gt-comments-controls {
+        margin: 1.25em 0;
+        text-align: center;
+    }
+    .gt-comment {
+        position: relative;
+        padding: 0.625em 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .gt-comment-content {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        margin-left: 1.25em;
+        padding: 0.75em 1em;
+        background-color: @background_color_8;
+        overflow: auto;
+        -webkit-transition: all ease 0.25s;
+        transition: all ease 0.25s;
+        &:hover {
+            -webkit-box-shadow: 0 0.625em 3.75em 0 #f4f4f4;
+            box-shadow: 0 0.625em 3.75em 0 #f4f4f4;
+        }
+    }
+    .gt-comment-header {
+        margin-bottom: 0.5em;
+        font-size: 0.875em;
+        position: relative;
+    }
+    .gt-comment-username {
+        font-weight: 500;
+        color: @color_1;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .gt-comment-text {
+        margin-left: 0.5em;
+        color: @color_6;
+    }
+    .gt-comment-date {
+        margin-left: 0.5em;
+        color: @color_6;
+    }
+    .gt-comment-like {
+        position: absolute;
+        height: 1.375em;
+        top: 0;
+        right: 2em;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .gt-comment-edit {
+        position: absolute;
+        height: 1.375em;
+        top: 0;
+        right: 0;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .gt-comment-reply {
+        position: absolute;
+        height: 1.375em;
+        top: 0;
+        right: 0;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .gt-comment-body {
+        color: @color_3 !important;
+    }
+    .gt-comment-admin {
+        .gt-comment-content {
+            background-color: @background_color_9;
+        }
+    }
+}
+.gt-container.gt-input-focused {
+    position: relative;
+    &:after {
+        content: '';
+        position: fixed;
+        bottom: 0%;
+        left: 0;
+        right: 0;
+        top: 0;
+        background: #000;
+        opacity: 0.6;
+        -webkit-transition: opacity 0.3s, bottom 0s;
+        transition: opacity 0.3s, bottom 0s;
+        z-index: 9999;
+    }
+    .gt-header-comment {
+        z-index: 10000;
+    }
+}
+@media (max-width: 479px) {
+    .gt-container {
+        .gt-avatar {
+            width: 2em;
+            height: 2em;
+        }
+        .gt-avatar-github {
+            width: 1.875em;
+            height: 1.875em;
+        }
+        .gt-header-comment {
+            margin-left: 0.875em;
+        }
+        .gt-header-controls {
+            margin: 0;
+            .gt-btn {
+                float: none;
+                width: 100%;
+                margin: 0.75em 0 0;
+            }
+        }
+        .gt-header-controls-tip {
+            display: none;
+        }
+        .gt-comment-content {
+            margin-left: 0.875em;
+            padding: 0.625em 0.75em;
+        }
+    }
+}

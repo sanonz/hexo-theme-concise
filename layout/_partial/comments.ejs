@@ -1,20 +1,18 @@
 <div class="comments">
-    <div id="disqus_thread">
-        <p class="comment-tips">国内查看评论需要代理~</p>
-    </div>
+    <div id="comments"></div>
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
     <script>
-    window.disqus_config = function () {
-        this.language = 'zh';
-        this.page.url = '<%= page.permalink %>';
-        this.page.title = '<%= page.title %>';
-        this.page.identifier = '<%= page.path %>';
-    };
-    (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://<%= theme.disqus.shortname %>.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
+    new Gitalk({
+        clientID: <%- JSON.stringify(theme.git_commit.client_id) %>,
+        clientSecret: <%- JSON.stringify(theme.git_commit.client_secret) %>,
+        repo: <%- JSON.stringify(theme.git_commit.repo) %>,
+        owner: <%- JSON.stringify(theme.git_commit.owner) %>,
+        admin: [<%- theme.git_commit.admin.map(admin => JSON.stringify(admin)).join() %>],
+        id: "<%- _.trim(post.path, '/') %>",
+        distractionFreeMode: true,
+        title: <%- JSON.stringify(post.title) %>,
+        body: <%- JSON.stringify(post.permalink) %>,
+        labels: [<%- post.tags.map(tag => JSON.stringify(tag.name)).join() %>]
+    }).render('comments');
     </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>

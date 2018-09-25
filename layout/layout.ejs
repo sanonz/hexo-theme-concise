@@ -22,7 +22,7 @@
     <%
     var description = config.description;
     if( is_post() ) {
-        description = strip_html(page.content).substr(0, 250);
+        description = _.truncate(strip_html(page.content), {length: 250}).replace(/\n/g, '');
     }
     %>
 
@@ -54,44 +54,44 @@
 
     <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.9.0/jquery.min.js"></script>
     <script type="text/javascript">
-        $(function() {
-            var nodes = {
-                nav: $('#nav'),
-                aside: $('#aside'),
-                asideInner: $('#aside-inner'),
-                navInner: $('#nav-inner')
-            };
+    $(function() {
+        var nodes = {
+            nav: $('#nav'),
+            aside: $('#aside'),
+            asideInner: $('#aside-inner'),
+            navInner: $('#nav-inner')
+        };
 
-            var doing = false;
-            nodes.asideInner.on('webkitAnimationEnd mozAnimationEnd oAnimationEnd oanimationend animationend', function() {
-                if (nodes.aside.hasClass('mobile-open')) {
-                    nodes.aside.removeClass('mobile-open');
-                } else {
-                    nodes.aside.removeClass('mobile-close panel-show');
-                }
-                doing = false;
-            });
-            $('#open-panel, #aside-mask').on('click', function() {
-                if (doing) {
-                    return;
-                }
-                
-                if (nodes.aside.hasClass('panel-show')) {
-                    nodes.aside.addClass('mobile-close');
-                } else {
-                    nodes.aside.addClass('mobile-open panel-show');
-                }
-            });
-            $('#open-menus').on('click', function() {
-                nodes.navInner.slideToggle();
-            });
-
-            if (window.innerWidth <= 960) {
-                setTimeout(() => {
-                    nodes.navInner.slideUp();
-                }, 3000);
+        var doing = false;
+        nodes.asideInner.on('webkitAnimationEnd mozAnimationEnd oAnimationEnd oanimationend animationend', function() {
+            if (nodes.aside.hasClass('mobile-open')) {
+                nodes.aside.removeClass('mobile-open');
+            } else {
+                nodes.aside.removeClass('mobile-close panel-show');
+            }
+            doing = false;
+        });
+        $('#open-panel, #aside-mask').on('click', function() {
+            if (doing) {
+                return;
+            }
+            
+            if (nodes.aside.hasClass('panel-show')) {
+                nodes.aside.addClass('mobile-close');
+            } else {
+                nodes.aside.addClass('mobile-open panel-show');
             }
         });
+        $('#open-menus').on('click', function() {
+            nodes.navInner.slideToggle();
+        });
+
+        if (window.innerWidth <= 960) {
+            setTimeout(() => {
+                nodes.navInner.slideUp();
+            }, 3000);
+        }
+    });
     </script>
     <% if (is_post()) { %>
         <script type="text/javascript" src="/js/scrollspy.min.js"></script>
