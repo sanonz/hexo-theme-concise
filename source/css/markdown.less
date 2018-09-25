@@ -167,8 +167,7 @@
   }
 
   code,
-  kbd,
-  pre {
+  kbd {
     font-family: monospace, monospace;
     font-size: 1em;
   }
@@ -327,7 +326,7 @@
     margin-top: 0;
     margin-bottom: 0;
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .octicon {
@@ -553,11 +552,8 @@
   }
 
   table {
-    display: block;
     width: 100%;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-    overflow-scrolling: touch;
+    max-width: 100%;
   }
 
   table th {
@@ -623,20 +619,10 @@
     border: 0;
   }
 
-  .highlight {
-    margin-bottom: 16px;
-  }
-
-  .highlight pre {
-    margin-bottom: 0;
-    word-break: normal;
-  }
-
-  .highlight pre,
   pre {
     padding: 16px;
     overflow: auto;
-    font-size: 85%;
+    // font-size: 85%;
     line-height: 1.45;
     background-color: #f6f8fa;
     border-radius: 3px;

@@ -1,20 +1,28 @@
 .highlight {
     display: block;
+    width: 100%;
     overflow-x: auto;
-    padding: 0.5em;
-    font-size: 14px;
+    padding: 10px;
+    font-size: 18px;
     line-height: 16px;
     background-color: #272822;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
 
     .gutter {
         pre {
-            width: 40px;
+            padding: 0 10px 0 0;
             color: #90908a;
             text-align: center;
         }
     }
+    .code {
+        pre {
+            padding: 0;
+        }
+    }
     .line {
-        min-height: 20px;
+        min-height: 18.67px;
     }
 
     &,
@@ -97,6 +105,8 @@
 }
 
 .markdown-body .highlight {
+    margin-bottom: 16px;
+    
     table {
         margin-bottom: 0;
 
@@ -110,10 +120,7 @@
         }
     }
     pre {
-        padding: 0;
-        overflow: auto;
-        font-size: inherit;
-        line-height: inherit;
+        margin-bottom: 0;
         background-color: transparent;
         border-radius: 0;
     }

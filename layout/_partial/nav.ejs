@@ -6,8 +6,10 @@
     </div>
 
     <nav id="nav-inner" class="nav-inner">
-        <% for (var i in theme.menu){ %>
-            <a class="nav-item<% if( theme.menu[i] === '/' && is_home() || is_current(theme.menu[i]) ) {  %> active<% } %>" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+        <% for (var key in theme.menu) { %>
+            <a class="nav-item<% if( theme.menu[key] === '/' && is_home() || is_current(theme.menu[key]) ) {  %> active<% } %>" href="<%- url_for(theme.menu[key]) %>">
+                <span class="nav-text"><%= key %></span>
+            </a>
         <% } %>
     </nav>
 </div>
