@@ -1,12 +1,12 @@
 # Header
 menu:
   首页: /
-  前端: categories/front-end
-  后端: back-end
-  标签: javascript:;
-  归档: archives
-  订阅: atom.xml
-  关于: about
+  前端: /categories/front-end
+  后端: /categories/back-end
+  标签: /tags
+  归档: /archives
+  订阅: /atom.xml
+  关于: /about
 
 # Content
 excerpt_link: 阅读更多
@@ -20,41 +20,27 @@ author:
 
 links:
   github: https://github.com/sanonz
-  more: http://m.timegoto.com/user/1
+  more: http://weibo.com/sanonz
   twitter: https://twitter.com/sanonze
 
-# widgets:
-# - category
-# - tag
-# - tagcloud
-# - archive
-# - recent_posts
 
-# display widgets at the bottom of index pages (pagination == 2)
-# index_widgets:
-# - category
-# - tagcloud
-# - archive
-
-# widget behavior
-# show_count: false
-# archive_type: 'monthly'
-
-# Disqus 
-disqus:
+# github comment 
+git_commit:
   enable: true
-  shortname: name    #your name
-  # count: true
+  client_id: 7fbe80427f54741e289f
+  client_secret: f34ed5fd92e54c9000bd37ba951948cb939deff5
+  repo: sanonz.github.io
+  owner: sanonz
+  admin:
+  - sanonz
+  per_page: 10
+
 
 # 友盟统计
 umeng:
   prefix: s13
-  id: 1234567890
+  id: 1271274815
 
 # Miscellaneous
-google_analytics:
-favicon: /favicon.png
-twitter:
-google_plus:
-fb_admins:
-fb_app_id:
+rss: /atom.xml
+favicon: /images/favicon.ico
