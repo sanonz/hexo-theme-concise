@@ -317,18 +317,6 @@
     margin-left: 0;
   }
 
-  code {
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    font-size: 12px;
-  }
-
-  pre {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    font-size: 16px;
-  }
-
   .octicon {
     vertical-align: text-bottom;
   }
@@ -589,6 +577,23 @@
     padding-right: 20px;
   }
 
+  code,
+  pre {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  }
+
+  pre {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 16px;
+    font-size: 16px;
+    overflow: auto;
+    line-height: 1.4;
+    word-wrap: normal;
+    background-color: #f6f8fa;
+    border-radius: 3px;
+  }
+
   code {
     padding: 0;
     padding-top: 0.2em;
@@ -605,10 +610,6 @@
     content: "\00a0";
   }
 
-  pre {
-    word-wrap: normal;
-  }
-
   pre>code {
     padding: 0;
     margin: 0;
@@ -617,15 +618,6 @@
     white-space: pre;
     background: transparent;
     border: 0;
-  }
-
-  pre {
-    padding: 16px;
-    overflow: auto;
-    // font-size: 85%;
-    line-height: 1.45;
-    background-color: #f6f8fa;
-    border-radius: 3px;
   }
 
   pre code {

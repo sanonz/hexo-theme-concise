@@ -2,6 +2,7 @@
     display: block;
     width: 100%;
     overflow-x: auto;
+    overflow-y: hidden;
     padding: 10px;
     font-size: 18px;
     line-height: 16px;
@@ -22,7 +23,11 @@
         }
     }
     .line {
-        min-height: 18.67px;
+        display: inline-block;
+
+        span {
+            display: inline-block;
+        }
     }
 
     &,
