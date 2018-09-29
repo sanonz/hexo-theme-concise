@@ -121,5 +121,13 @@ categories: front-end
 ---
 ```
 
+单独设置归档(Archive)每页显示文章数量，例如每页 `30` 篇
+```yml
+# Archive page setting
+archive_generator:
+  per_page: 30
+  order_by: -date
+```
+
 列表文章显示 `阅读更多` 按钮，在需要截断的地方插入 `<!-- more -->` 注释
 
