@@ -62,10 +62,14 @@ author:
   location: Shenzhen, China
   avatar_url: /images/avatar.jpg
 
+# Links:
 links:
-  github: https://github.com/sanonz
-  more: http://weibo.com/sanonz
-  twitter: https://twitter.com/sanonze
+  - svg: ./source/svg/github.svg
+    url: https://github.com/sanonz
+  - svg: ./source/svg/more.svg
+    url: http://weibo.com/sanonz
+  - svg: ./source/svg/twitter.svg
+    url: https://twitter.com/sanonze
 
 # github comment 
 git_commit:
@@ -78,7 +82,7 @@ git_commit:
   - sanonz
   per_page: 10
 
-# 友盟统计
+# Umeng
 umeng:
   prefix: s13
   id: 1234567890
@@ -91,12 +95,20 @@ favicon: /images/favicon.ico
 - **menu** - 导航列表
 - **excerpt_link** - 文章列表阅读更多显示文字
 - **sidebar** - 配置博主个人信息，显示在边栏
+- **links** - 配置博主个人信息下边的链接，icon 存放位置为：./source/svg
 - **git_commit** - 配置评论，使用的 gitalk 插件，具体配置说明请到官方查看 [https://github.com/gitalk/gitalk](https://github.com/gitalk/gitalk)
 - **umeng** - 配置站点访问统计，需要自行注册 [Umeng](http://web.umeng.com/main.php?c=user&a=index) 然后获取域名前缀与 ID 填写到这里
 - **rss** - 在 `<head>` 标签中显示 RSS 链接
 - **favicon** - favicon URL 地址配置
 
 ## 小技巧
+
+想要自定义 icon 的话，可以到 [fontawesome](https://fontawesome.com/icons)、[iconfont](http://iconfont.cn) 下载 svg 格式图标，放到 `./source/svg` 目录，按着如下例子配置
+``` yml
+links:
+  - svg: ./source/svg/your.svg
+    url: https://your.com
+```
 
 可以关闭单个文章的评论，把 `comments` 设置为 `false`，默认为 `true`，例如：
 ``` markdown

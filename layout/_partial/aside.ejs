@@ -28,15 +28,11 @@
             <% if( theme.links ) { %>
             <div class="author-thread-wrap">
                 <div class="author-threads clearfix">
-                    <% if( theme.links.github ) { %>
-                    <a class="thread-item" href="<%= theme.links.github %>" target="_blank" rel="noopener"><i class="icon-github"></i></a>
-                    <% } %>
-                    <% if( theme.links.more ) { %>
-                    <a class="thread-item" href="<%= theme.links.more %>" target="_blank" rel="noopener"><i class="icon-circle-more"></i></a>
-                    <% } %>
-                    <% if( theme.links.twitter ) { %>
-                    <a class="thread-item" href="<%= theme.links.twitter %>" target="_blank" rel="noopener"><i class="icon-twitter"></i></a>
-                    <% } %>
+                    <% theme.links.forEach(function(link, index) { %>
+                        <a class="thread-item" href="<%= link.url %>" target="_blank" rel="noopener">
+                            <%- include({path: link.svg}) %>
+                        </a>
+                    <% }) %>
                 </div>
             </div>
             <% } %>
