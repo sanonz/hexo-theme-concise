@@ -7,11 +7,11 @@
     </ol></section>
     <% } %>
     <% last = year %>
-    <% var month = !page.hasOwnProperty('tag') && isMonth ? '/' + post.date.format('MM') : '' %>
+    <% var month = isMonth ? '/' + post.date.format('MM') : '' %>
     <section class="archives-wrap">
     <div class="archive-year-wrap">
     <a href="<%- url_for(config.archive_dir + '/' + year + month) %>" class="page-hd">
-        <%= page.tag ? page.tag : year + month %>
+        <%= year + month %>
     </a>
     </div>
     <ol class="archives">

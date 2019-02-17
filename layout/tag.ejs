@@ -1,1 +1,8 @@
+<% var total = page.posts.length %>
+<% var per_page = config.archive_generator.per_page %>
+
+<div class="page-hd">
+    <%= page.tag %>
+    <small>(<%= page.total > 1 ? (page.total - 1) * per_page + total : total %>)</small>
+</div>
 <%- partial('archive') %>
