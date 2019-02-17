@@ -1,9 +1,15 @@
 <footer class="footer">
     <%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a>, Theme by <a href="https://github.com/sanonz/hexo-theme-concise" target="_blank">Concise</a>
 
-    <% if( theme.umeng && theme.umeng.prefix && theme.umeng.id ) { %>
-        &ensp;
-        <span id="cnzz_stat_icon_<%= theme.umeng.id %>" class="vm"></span>
-        <script src="//<%= theme.umeng.prefix %>.cnzz.com/stat.php?id=<%= theme.umeng.id %>&show=pic" type="text/javascript"></script>
+    <% if( theme.baidu && theme.baidu.id ) { %>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?<%= theme.baidu.id %>";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
     <% } %>
 </footer>

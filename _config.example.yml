@@ -40,10 +40,9 @@ git_commit:
   per_page: 10
 
 
-# Umeng
-umeng:
-  prefix: s13
-  id: 1271274815
+# 百度统计
+baidu:
+  id: e4027971a230b210f4671f485b33846a
 
 # Miscellaneous
 rss: /atom.xml
