@@ -127,6 +127,25 @@
     display: none;
 }
 
+@link-size: 40px;
+.article-prev,
+.article-next {
+    display: block;
+    width: @link-size;
+    height: @link-size;
+    line-height: @link-size;
+    text-align: center;
+    color: #999;
+    font-size: 42px;
+
+    &:hover {
+        color: #333;
+    }
+}
+.article-next {
+    float: right;
+}
+
 @media screen and (max-width: @size-mobile-screen-width) {
     .article-meta {
         font-size: 13px;

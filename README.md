@@ -54,6 +54,7 @@ menu:
 
 # Content
 excerpt_link: 阅读更多
+content_max_width: 800px
 
 # Sidebar
 author:
@@ -93,6 +94,7 @@ favicon: /images/favicon.ico
 
 - **menu** - 导航列表
 - **excerpt_link** - 文章列表阅读更多显示文字
+- **content_max_width** - 站点布局内容区域的最大宽度，超过最大宽度左右留白出现翻页按钮，默认最大 `800px`
 - **sidebar** - 配置博主个人信息，显示在边栏
 - **links** - 配置博主个人信息下边的链接，icon 存放位置为：./source/svg
 - **git_commit** - 配置评论，使用的 gitalk 插件，具体配置说明请到官方查看 [https://github.com/gitalk/gitalk](https://github.com/gitalk/gitalk)

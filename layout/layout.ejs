@@ -47,7 +47,11 @@
 
     <main class="app">
         <%- partial('_partial/header') %>
-        <div id="content" class="content"><%- body %></div>
+        <div id="content" class="content">
+            <div id="wrapper" class="wrapper"<% if( theme.content_max_width ) { %> style="max-width: <%= theme.content_max_width %>"<% } %>>
+                <%- body %>
+            </div>
+        </div>
         <%- partial('_partial/footer', {}, {cache: true}) %>
     </main>
 
@@ -96,6 +100,26 @@
         <script type="text/javascript" src="/js/scrollspy.min.js"></script>
         <script type="text/javascript">
         $(document.body).scrollspy({target: '#aside-inner'});
+
+        $(window).on('resize', function() {
+            var hw = $('#header').width();
+            var ww = $('#wrapper').width();
+            var space = ($(this).width() - hw - ww) / 2 / 2;
+
+            var pageprev = $('#pageprev');
+            var pagenext = $('#pagenext');
+            var avg = (pageprev.width() + pagenext.width()) / 2
+
+            if(space > avg) {
+                var len = space - avg / 2;
+                var styles = {position: 'fixed', top: '50%', marginTop: - (pageprev.width() + pagenext.width()) / 4}
+                pageprev.css($.extend({left: hw + len}, styles));
+                pagenext.css($.extend({right: len}, styles));
+            } else {
+                pageprev.removeAttr('style');
+                pagenext.removeAttr('style');
+            }
+        }).trigger('resize');
         </script>
     <% } %>
 
