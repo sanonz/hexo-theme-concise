@@ -120,9 +120,18 @@ comments: true
 ---
 ```
 
-访问 Tags 页面 404，执行一下命令解决
+访问 Tags 页面 404，执行一下命令，然后修改 `source\tags\index.md` 文件，添加 `layout: tags`
 ``` bash
-$ hexo new tags "标签"
+$ hexo new page tags
+INFO  Created: E:\blog\source\tags\index.md
+```
+
+```yam
+---
+title: tags
+date: 2019-09-29 17:27:33
+layout: tags
+---
 ```
 
 添加分类列表，设置文章的 `categories` 字段然后访问 `/categories/front-end`
