@@ -126,7 +126,7 @@ $ hexo new page tags
 INFO  Created: E:\blog\source\tags\index.md
 ```
 
-```yam
+``` markdown
 ---
 title: tags
 date: 2019-09-29 17:27:33
