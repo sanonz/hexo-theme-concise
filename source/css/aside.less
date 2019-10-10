@@ -45,10 +45,10 @@
     width: 180px;
 }
 .search-form-input {
+    display: block;
     width: 100%;
     height: @search-height;
-    padding-right: 10px;
-    padding-left: @search-submit-width;
+    padding: 8px 10px 8px @search-submit-width;
     border: 1px solid #f1f1f1;
     border-radius: 6px;
     box-sizing: border-box;
@@ -187,7 +187,7 @@
     to {
         // opacity: 0;
         .transform(translate3d(-100%, 0, 0));
-    }    
+    }
 });
 .keyframes(aside-fade-in-right, {
     from {
@@ -197,5 +197,5 @@
     to {
         opacity: 1;
         .transform(none);
-    }    
+    }
 });

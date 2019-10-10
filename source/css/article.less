@@ -78,53 +78,66 @@
 }
 
 .toc {
-    padding: 20px;
-    line-height: 20px;
+    padding: 20px 0;
+    font-size: 15px;
+    line-height: 18px;
     list-style-type: none;
 
     ol {
-        padding: 10px;
-        padding-left: 26px;
+        padding-left: 20px;
         list-style-type: none;
     }
 }
 .toc-item {
-    padding: 4px 0;
-
     &.active {
         > .toc-link {
             color: #2b2b2b;
+            background-color: #eee;
 
             &:before {
-                opacity: 1\9;
+                display: block\9;
                 .transform(scale(1));
             }
         }
     }
 }
 .toc-link {
+    .flexbox();
+
+    display: block\9;
     position: relative;
-    display: block;
-    padding-left: 10px;
+    padding: 5px 10px;
     color: #585858;
 
     &:before {
         position: absolute;
         top: 0;
-        left: 0;
+        right: 0;
         content: '';
         width: 2px;
         height: 100%;
         line-height: 0;
         font-size: 0;
         background-color: @color-primary;
-        opacity: 0\9;
+        display: none\9;
         .transform(scale(0));
         .transition(transform 0.3s ease);
     }
 }
+.toc-child {
+    margin-top: 1px;
+}
 .toc-number {
-    display: none;
+    .flex-grow(0);
+    .flex-shrink(0);
+
+    padding-right: 6px;
+    color: #999;
+    font-style: italic;
+}
+.toc-text {
+    .flex-grow(1);
+    .flex-shrink(1);
 }
 
 @link-size: 40px;
