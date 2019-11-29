@@ -104,23 +104,25 @@ favicon: /images/favicon.ico
 
 ## 小技巧
 
-想要自定义 icon 的话，可以到 [fontawesome](https://fontawesome.com/icons)、[iconfont](http://iconfont.cn) 下载 svg 格式图标，放到 `./source/svg` 目录，按着如下例子配置
+#### 想要自定义 icon 的话，可以到 [fontawesome](https://fontawesome.com/icons)、[iconfont](http://iconfont.cn) 下载 svg 格式图标，放到 `./source/svg` 目录，按着如下例子配置
 ``` yml
 links:
-  - svg: ./source/svg/your.svg
-    url: https://your.com
+  - svg: ./source/svg/github.svg
+    url: https://github.com/sanonz
+  - svg: ./source/svg/twitter.svg
+    url: https://twitter.com/sanonze
 ```
 
-可以关闭单个文章的评论，把 `comments` 设置为 `false`，默认为 `true`，例如：
+#### 可以关闭单个文章的评论，把 `comments` 设置为 `false`，默认为 `true`，例如：
 ``` markdown
 ---
 title: Hello World
 date: 2017-10-20 20:00:00
-comments: true
+comments: false
 ---
 ```
 
-访问 Tags 页面 404，执行一下命令，然后修改 `source\tags\index.md` 文件，添加 `layout: tags`
+#### 访问 Tags 页面 404，执行一下命令，然后修改 `source\tags\index.md` 文件，添加 `layout: tags`
 ``` bash
 $ hexo new page tags
 INFO  Created: E:\blog\source\tags\index.md
@@ -134,7 +136,7 @@ layout: tags
 ---
 ```
 
-添加分类列表，设置文章的 `categories` 字段然后访问 `/categories/front-end`
+#### 添加分类列表，设置文章的 `categories` 字段然后访问 `/categories/front-end`
 ``` markdown
 ---
 title: Hello World
@@ -143,7 +145,7 @@ categories: front-end
 ---
 ```
 
-单独设置归档(Archive)每页显示文章数量，例如每页 `30` 篇
+#### 单独设置归档(Archive)每页显示文章数量，例如每页 `30` 篇
 ```yml
 # Archive page setting
 archive_generator:
@@ -151,5 +153,9 @@ archive_generator:
   order_by: -date
 ```
 
-列表文章显示 `阅读更多` 按钮，在需要截断的地方插入 `<!-- more -->` 注释
+#### 列表文章显示 `阅读更多` 按钮，在需要截断的地方插入 `<!-- more -->` 注释
 
+#### 其它一些小问题
+
+1. [解决订阅页面空白问题](https://github.com/sanonz/hexo-theme-concise/issues/28#issuecomment-506638925)
+2. [添加 MathJax / KaTeX 数学公式支持](https://github.com/sanonz/hexo-theme-concise/issues/33#issuecomment-557409332)
