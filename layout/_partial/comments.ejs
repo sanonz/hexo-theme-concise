@@ -12,7 +12,7 @@
         distractionFreeMode: true,
         title: <%- JSON.stringify(post.title) %>,
         body: <%- JSON.stringify(post.permalink) %>,
-        labels: [<%- post.tags.map(tag => JSON.stringify(tag.name)).join() %>]
+        labels: [<% if( post.tags ) { %><%- post.tags.map(tag => JSON.stringify(tag.name)).join() %><% } %>]
     }).render('comments');
     </script>
 </div>
