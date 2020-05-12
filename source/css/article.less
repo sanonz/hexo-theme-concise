@@ -41,10 +41,12 @@
     h1 {
         a {
             color: @color-primary;
+            color: var(--color-primary);
             .transition(all 0.3s ease);
 
             &:hover {
-                color: @color-hover;
+                color: @color-link-hover;
+                color: var(--color-link-hover);
             }
         }
     }
@@ -55,22 +57,27 @@
 }
 .article-date {
     color: @color-muted;
+    color: var(--color-muted);
 
     &:hover {
         color: @color-primary;
+        color: var(--color-primary);
     }
 }
 .article-tag-list {
     color: @color-muted;
+    color: var(--color-muted);
     list-style-type: none;
     overflow: hidden;
 }
 .article-tag-link {
     margin: 0 6px;
     color: @color-muted;
+    color: var(--color-muted);
 
     &:hover {
-        color: @color-hover;
+        color: @color-primary;
+        color: var(--color-primary);
     }
 }
 
@@ -81,16 +88,17 @@
         display: inline-block;
         padding: 6px 12px;
         color: @color-muted;
+        color: var(--color-muted);
         font-size: 14px;
         line-height: 1;
         border: 1px solid @color-border;
+        border: 1px solid var(--color-border);
         border-radius: 4px;
         .transition(all 0.3s ease);
 
         &:hover {
-            color: @color-hover;
-            background-color: #f7f7f7;
-            border-color: #dedede;
+            background-color: @color-hover;
+            background-color: var(--color-hover);
             text-decoration: none;
         }
     }
@@ -110,8 +118,10 @@
 .toc-item {
     &.active {
         > .toc-link {
-            color: #2b2b2b;
-            background-color: #eee;
+            color: @color-secondary;
+            color: var(--color-secondary);
+            background-color: @color-active;
+            background-color: var(--color-active);
 
             &:before {
                 display: block\9;
@@ -126,7 +136,8 @@
     display: block\9;
     position: relative;
     padding: 5px 10px;
-    color: #585858;
+    color: @color-secondary;
+    color: var(--color-secondary);
 
     &:before {
         position: absolute;
@@ -138,9 +149,14 @@
         line-height: 0;
         font-size: 0;
         background-color: @color-primary;
+        background-color: var(--color-primary);
         display: none\9;
         .transform(scale(0));
         .transition(transform 0.3s ease);
+    }
+    &:hover {
+        background-color: @color-hover;
+        background-color: var(--color-hover);
     }
 }
 .toc-child {
@@ -151,7 +167,8 @@
     .flex-shrink(0);
 
     padding-right: 6px;
-    color: #999;
+    color: @color-muted;
+    color: var(--color-muted);
     font-style: italic;
 }
 .toc-text {
@@ -167,11 +184,13 @@
     height: @link-size;
     line-height: @link-size;
     text-align: center;
-    color: #999;
+    color: @color-secondary;
+    color: var(--color-secondary);
     font-size: 42px;
 
     &:hover {
-        color: #333;
+        color: @color-primary;
+        color: var(--color-primary);
     }
 }
 .article-next {

@@ -544,7 +544,6 @@
   }
 
   table tr {
-    background-color: #fff;
     border-top: 1px solid #c6cbd1;
   }
 
@@ -665,5 +664,35 @@
 
   hr {
     border-bottom-color: #eee;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .markdown-body {
+    a {
+      color: #70b3ff;
+    }
+
+    h1, h2, hr {
+      border-bottom-color: #484848;
+    }
+
+    blockquote {
+      background-color: #313338;
+      border-left-color: #686b6f;
+    }
+
+    table {
+      tr, th, td {
+        border-color: #3f4248;
+      }
+      tr:nth-child(2n) {
+        background-color: #303238;
+      }
+    }
+
+    img, pre, code {
+      background-color: #3f4248;
+    }
   }
 }

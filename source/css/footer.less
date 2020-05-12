@@ -5,11 +5,13 @@
     height: @size-footer-height;
     line-height: @size-footer-height;
     color: @color-muted;
+    color: var(--color-muted);
     text-align: center;
     font-size: 13px;
 
     a {
         color: @color-muted;
+        color: var(--color-muted);
         text-decoration: underline;
     }
 }
@@ -18,6 +20,5 @@
 @media screen and (max-width: @size-mobile-screen-width) {
     .footer {
         margin-left: 0;
-        // padding-bottom: @size-mobile-nav-height;
     }
 }

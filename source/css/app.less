@@ -2,9 +2,44 @@
 @import (reference) './mixin.less';
 
 
+:root {
+    --color-bg: @color-bg;
+    --color-primary: @color-primary;
+    --color-secondary: @color-secondary;
+    --color-muted: @color-muted;
+    --color-hover: @color-hover;
+    --color-active: @color-active;
+    --color-border: @color-border;
+    --color-link: @color-link;
+    --color-link-hover: @color-link-hover;
+    --color-nav: @color-nav;
+    --color-aside: @color-aside;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg: #2b2e32;
+        --color-primary: #eaeaea;
+        --color-secondary: #a0a0a0;
+        --color-muted: #a0a0a0;
+        --color-hover: #393939;
+        --color-active: #454444;
+        --color-border: #434343;
+        --color-link: #fd413c;
+        --color-link-hover: #fd413c;
+        --color-nav: #22252a;
+        --color-aside: #282b30;
+    }
+}
 
 html, body, .app {
     height: 100%;
+}
+body {
+    color: @color-primary;
+    color: var(--color-primary);
+    background-color: @color-bg;
+    background-color: var(--color-bg);
 }
 
 .header {
@@ -26,7 +61,7 @@ html, body, .app {
 .content {
     margin-left: @size-nav-width + @size-aside-width;
     padding: @content-vertical @content-horizontal;
-    min-height: calc(~'100% -' @size-footer-height + @content-horizontal);
+    min-height: calc(~'100% -' @size-footer-height - @content-horizontal);
     overflow-x: hidden;
     overflow-y: auto;
     .animation(fade-in-down 0.6s 0.6s both);
@@ -50,11 +85,13 @@ html, body, .app {
 
 .page-hd {
     color: @color-primary;
+    color: var(--color-primary);
     font-size: 2em;
 
     small {
         font-size: 0.6em;
         color: @color-muted;
+        color: var(--color-muted);
         font-weight: normal;
     }
 }

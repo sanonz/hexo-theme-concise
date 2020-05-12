@@ -4,10 +4,12 @@
     padding-left: 1.75em;
 
     a {
-        color: #4a4a4a;
+        color: @color-secondary;
+        color: var(--color-secondary);
 
         &:hover {
             color: @color-hover;
+            color: var(--color-hover);
         }
     }
 }
@@ -15,6 +17,7 @@
   margin-left: 1em;
   padding: 0.2em 0.4em;
   font-size: 85%;
-  background-color: rgba(27,31,35,0.05);
+  background-color: @color-hover;
+  background-color: var(--color-hover);
   border-radius: 3px;
 }

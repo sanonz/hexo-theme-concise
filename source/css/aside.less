@@ -5,7 +5,8 @@
     position: relative;
     width: @size-aside-width;
     height: 100%;
-    background-color: #f9f9f9;
+    background-color: @color-aside;
+    background-color: var(--color-aside);
     .animation(fade-in-down 0.6s 0.3s both);
 
     &:before {
@@ -17,7 +18,8 @@
         line-height: 0;
         width: 1px;
         height: 100%;
-        background-color: #eee;
+        background-color: @color-border;
+        background-color: var(--color-border);
     }
     &.mobile-open .aside-inner {
         .animation(aside-fade-in-right 0.6s both);
@@ -43,20 +45,27 @@
     position: relative;
     margin: 40px auto;
     width: 180px;
+    color: @color-muted;
+    color: var(--color-muted);
 }
 .search-form-input {
     display: block;
     width: 100%;
     height: @search-height;
     padding: 8px 10px 8px @search-submit-width;
-    border: 1px solid #f1f1f1;
+    color: @color-muted;
+    color: var(--color-muted);
+    border: 1px solid @color-border;
+    border: 1px solid var(--color-border);
+    background-color: @color-bg;
+    background-color: var(--color-bg);
     border-radius: 6px;
     box-sizing: border-box;
     -webkit-appearance: none;
 
     &:focus {
-        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #ececec;
-        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #ececec;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px var(--color-border);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px var(--color-border);
     }
 }
 .search-form-submit {
@@ -65,6 +74,8 @@
     left: 0;
     width: @search-submit-width;
     height: @search-height;
+    color: @color-muted;
+    color: var(--color-muted);
     text-align: center;
     background-color: transparent;
     border: none;
@@ -76,6 +87,7 @@
     left: 0;
     width: 100%;
     color: @color-primary;
+    color: var(--color-primary);
     text-align: center;
     line-height: 30px;
     .transform(translateY(-50%));
@@ -112,6 +124,7 @@
 }
 .author-location {
     color: @color-muted;
+    color: var(--color-muted);
     font-size: 14px;
 }
 
@@ -131,10 +144,12 @@
     display: inline-block;
     margin: 0 18px;
     color: @color-muted;
+    color: var(--color-muted);
     .transition(color 0.3s ease);
 
     &:hover {
         color: @color-primary;
+        color: var(--color-primary);
     }
 }
 
@@ -165,7 +180,8 @@
         width: 80%;
         min-width: 250px;
         max-width: 360px;
-        background-color: @color-white;
+        background-color: @color-bg;
+        background-color: var(--color-bg);
     }
     .aside-mask {
         position: absolute;
@@ -174,7 +190,7 @@
         display: block;
         width: 100%;
         height: 100%;
-        background-color: fade(@color-black, 10%);
+        background-color: rgba(0, 0, 0, 0.5);
     }
 }
 
