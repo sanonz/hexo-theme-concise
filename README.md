@@ -105,7 +105,8 @@ favicon: /images/favicon.ico
 ## 小技巧
 
 #### 想要自定义 icon 的话，可以到 [fontawesome](https://fontawesome.com/icons)、[iconfont](http://iconfont.cn) 下载 svg 格式图标，放到 `./source/svg` 目录，按着如下例子配置
-``` yml
+
+```yml
 links:
   - svg: ./source/svg/github.svg
     url: https://github.com/sanonz
@@ -114,38 +115,42 @@ links:
 ```
 
 #### 可以关闭单个文章的评论，把 `comments` 设置为 `false`，默认为 `true`，例如：
-``` markdown
----
-title: Hello World
-date: 2017-10-20 20:00:00
-comments: false
----
+
+```diff
+  ---
+  title: Hello World
+  date: 2017-10-20 20:00:00
++ comments: false
+  ---
 ```
 
-#### 访问 Tags 页面 404，执行一下命令，然后修改 `source\tags\index.md` 文件，添加 `layout: tags`
-``` bash
+#### 访问 Tags 页面 404，执行以下命令，然后修改 `source/tags/index.md` 文件，添加 `layout: tags`
+
+```bash
 $ hexo new page tags
 INFO  Created: E:\blog\source\tags\index.md
 ```
 
-``` markdown
----
-title: tags
-date: 2019-09-29 17:27:33
-layout: tags
----
+```diff
+  ---
+  title: tags
+  date: 2019-09-29 17:27:33
++ layout: tags
+  ---
 ```
 
 #### 添加分类列表，设置文章的 `categories` 字段然后访问 `/categories/front-end`
-``` markdown
----
-title: Hello World
-date: 2017-10-20 20:00:00
-categories: front-end
----
+
+```diff
+  ---
+  title: Hello World
+  date: 2017-10-20 20:00:00
++ categories: front-end
+  ---
 ```
 
 #### 单独设置归档(Archive)每页显示文章数量，例如每页 `30` 篇
+
 ```yml
 # Archive page setting
 archive_generator:
