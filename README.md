@@ -155,7 +155,8 @@ archive_generator:
 
 #### 列表文章显示 `阅读更多` 按钮，在需要截断的地方插入 `<!-- more -->` 注释
 
-#### 其它一些小问题
+#### 其它一些问题
 
 1. [解决订阅页面空白问题](https://github.com/sanonz/hexo-theme-concise/issues/28#issuecomment-506638925)
 2. [添加 MathJax / KaTeX 数学公式支持](https://github.com/sanonz/hexo-theme-concise/issues/33#issuecomment-557409332)
+3. [利用 Github Actions 自动部署 Hexo 博客](https://sanonz.github.io/2020/deploy-a-hexo-blog-from-github-actions/)
