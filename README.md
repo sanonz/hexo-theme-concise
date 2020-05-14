@@ -34,7 +34,9 @@ $ git clone https://github.com/sanonz/hexo-theme-concise.git themes/concise
 
 ``` bash
 $ cd themes/concise
+$ git stash --include-untracked
 $ git pull
+$ git stash pop
 ```
 
 ## 配置
