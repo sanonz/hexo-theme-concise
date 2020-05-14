@@ -110,6 +110,8 @@ favicon: /images/favicon.ico
 links:
   - svg: ./source/svg/github.svg
     url: https://github.com/sanonz
+  - svg: ./source/svg/mail.svg
+    url: mailto:sanonz@126.com
   - svg: ./source/svg/twitter.svg
     url: https://twitter.com/sanonze
 ```
