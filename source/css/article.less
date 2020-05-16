@@ -36,9 +36,10 @@
     }
 }
 .article-header {
-    font-size: 26px;
-
     h1 {
+        font-size: 2em;
+        font-weight: normal;
+
         a {
             color: @color-primary;
             color: var(--color-primary);
@@ -63,6 +64,10 @@
         color: @color-primary;
         color: var(--color-primary);
     }
+
+    time {
+        margin-left: 6px;
+    }
 }
 .article-tag-list {
     color: @color-muted;
@@ -71,9 +76,10 @@
     overflow: hidden;
 }
 .article-tag-link {
-    margin: 0 6px;
+    margin-left: 6px;
     color: @color-muted;
     color: var(--color-muted);
+    vertical-align: middle;
 
     &:hover {
         color: @color-primary;
@@ -139,7 +145,7 @@
 
     display: block\9;
     position: relative;
-    padding: 5px 10px;
+    padding: 5px 15px;
     color: @color-secondary;
     color: var(--color-secondary);
 
