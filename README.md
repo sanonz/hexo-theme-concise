@@ -7,12 +7,14 @@ Hexo 简约主题，响应式设计支持 PC、平板、手机等设备，代码
 
 ### 前提
 
-因为这个主题使用了 less 编译，Hexo 默认的编译器为 [hexo-renderer-stylus](https://github.com/hexojs/hexo-renderer-stylus) 要切换为 [hexo-renderer-less](https://github.com/hexojs/hexo-renderer-less)
+因为这个主题使用了 less 编译，Hexo 默认的编译器为 [hexo-renderer-stylus](https://github.com/hexojs/hexo-renderer-stylus) 要切换为 [hexo-renderer-less](https://github.com/hexojs/hexo-renderer-less)。
+
 ``` bash
 $ npm install hexo-renderer-less --save
 ```
 
-如果你不需要 `hexo-renderer-stylus` 可以把它卸载掉
+如果你不需要 `hexo-renderer-stylus` 可以把它卸载掉。
+
 ``` bash
 $ npm uninstall hexo-renderer-stylus --save
 ```
@@ -41,7 +43,7 @@ $ git stash pop
 
 ## 配置
 
-修改 `themes/concise/_config.yml` 配置文件
+修改 `themes/concise/_config.yml` 配置文件。
 
 ``` yml
 # Header
@@ -106,7 +108,7 @@ favicon: /images/favicon.ico
 
 ## 小技巧
 
-#### 想要自定义 icon 的话，可以到 [fontawesome](https://fontawesome.com/icons)、[iconfont](http://iconfont.cn) 下载 svg 格式图标，放到 `./source/svg` 目录，按着如下例子配置
+#### 想要自定义 icon 的话，可以到 [fontawesome](https://fontawesome.com/icons)、[iconfont](http://iconfont.cn) 下载 svg 格式图标，放到 `./source/svg` 目录，按着如下例子配置。
 
 ```yml
 links:
@@ -128,11 +130,18 @@ links:
   ---
 ```
 
-#### 访问 Tags 页面 404，执行以下命令，然后修改 `source/tags/index.md` 文件，添加 `layout: tags`
+#### 访问关于页面 404，执行以下命令，然后在 `source/about/index.md` 文件添加个人介绍。
+
+```bash
+$ hexo new page about
+INFO  Created: /Projects/blog/source/about/index.md
+```
+
+#### 访问 Tags 页面 404，执行以下命令，然后修改 `source/tags/index.md` 文件，添加 `layout: tags`。
 
 ```bash
 $ hexo new page tags
-INFO  Created: E:\blog\source\tags\index.md
+INFO  Created: /Projects/blog/source/tags/index.md
 ```
 
 ```diff
@@ -143,7 +152,7 @@ INFO  Created: E:\blog\source\tags\index.md
   ---
 ```
 
-#### 添加分类列表，设置文章的 `categories` 字段然后访问 `/categories/front-end`
+#### 添加分类列表，设置文章的 `categories` 字段然后访问 `/categories/front-end`。
 
 ```diff
   ---
@@ -153,7 +162,7 @@ INFO  Created: E:\blog\source\tags\index.md
   ---
 ```
 
-#### 单独设置归档(Archive)每页显示文章数量，例如每页 `30` 篇
+#### 单独设置归档 (Archive) 每页显示文章数量，例如每页 `30` 篇。
 
 ```yml
 # Archive page setting
@@ -162,7 +171,7 @@ archive_generator:
   order_by: -date
 ```
 
-#### 列表文章显示 `阅读更多` 按钮，在需要截断的地方插入 `<!-- more -->` 注释
+#### 列表文章显示 `阅读更多` 按钮，在需要截断的地方插入 `<!-- more -->` 注释。
 
 #### 其它一些问题
 
