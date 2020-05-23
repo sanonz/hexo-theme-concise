@@ -22,14 +22,14 @@ $ npm uninstall hexo-renderer-stylus --save
 ### 安装
 
 ``` bash
-$ git clone https://github.com/sanonz/hexo-theme-concise.git themes/concise
+$ git clone git@github.com:sanonz/hexo-theme-concise.git themes/concise
 ```
 
 **Concise 主题需要 Hexo 2.4 或者更高的版本**
 
 ### 切换
 
-1. 在 `_config.yml` 配置文件中 把 `theme` 值改为 `concise`.
+1. 在 `_config.yml` 站点配置文件中 把 `theme` 值改为 `concise`.
 2. 复制 `themes/concise/_config.example.yml` 配置文件为 `themes/concise/_config.yml`
 
 ### 更新
@@ -43,7 +43,7 @@ $ git stash pop
 
 ## 配置
 
-修改 `themes/concise/_config.yml` 配置文件。
+修改 `themes/concise/_config.yml` 主题配置文件。
 
 ``` yml
 # Header
@@ -195,7 +195,7 @@ archive_generator:
 $ npm install hexo-all-minifier
 ```
 
-然后在主题配置文件中 `_config.yml` 启用插件。
+然后在站点配置文件中 `_config.yml` 启用插件。
 
 ```diff
 + # optimizes HTML, CSS, JS and imagages
