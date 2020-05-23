@@ -173,6 +173,37 @@ archive_generator:
 
 #### 列表文章显示 `阅读更多` 按钮，在需要截断的地方插入 `<!-- more -->` 注释。
 
+```diff
+  ---
+  title: 我发布的第一篇文章
+  ---
+
+  这里写简介。
+
++ <!-- more -->
+
+  这里的内容进入详情才能看到。
+```
+
+#### 压缩混淆生成的 HTML、CSS、JS 文件。
+
+打开 [https://sanonz.github.io/](https://sanonz.github.io/) 鼠标右键 `显示网页源代码` 选项查看效果，如果你也想要这种效果的话按照以下步骤添加。
+
+首先安装 [hexo-all-minifier](https://github.com/chenzhutian/hexo-all-minifier) 插件。
+
+```bash
+$ npm install hexo-all-minifier
+```
+
+然后在主题配置文件中 `_config.yml` 启用插件。
+
+```diff
++ # optimizes HTML, CSS, JS and imagages
++ all_minifier: true
+```
+
+更多插件相关配置请到插件主页查阅。
+
 #### 其它一些问题
 
 1. [解决订阅页面空白问题](https://github.com/sanonz/hexo-theme-concise/issues/28#issuecomment-506638925)
