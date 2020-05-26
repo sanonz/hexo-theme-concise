@@ -202,6 +202,35 @@ $ npm install hexo-all-minifier
 + all_minifier: true
 ```
 
+安装 [cross-env](https://github.com/kentcdodds/cross-env) 跨平台环境变量设置脚本。
+
+```bash
+$ npm i cross-env
+```
+
+生成站点，当 `process.env.NODE_ENV=production` 时 `hexo-all-minifier` 插件才工作。
+
+```bash
+$ cross-env NODE_ENV=production hexo generate
+```
+
+生成后验证 `public` 目录内的静态文件是否是混淆压缩过的。
+
+为了方便以后使用可以加到 `package.json` 文件的 `scripts` 字段中。
+
+```diff
+  {
+    // ...
+    "scripts": {
++     "start": "cross-env NODE_ENV=development hexo server",
++     "deploy": "cross-env NODE_ENV=production hexo generate --deploy"
+    },
+    // ...
+  }
+```
+
+`start` 为本地启动命令，`deploy` 为部署命令。
+
 更多插件相关配置请到插件主页查阅。
 
 #### 其它一些问题
