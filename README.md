@@ -22,7 +22,7 @@ $ npm uninstall hexo-renderer-stylus --save
 ### 安装
 
 ``` bash
-$ git clone git@github.com:sanonz/hexo-theme-concise.git themes/concise
+$ git clone https://github.com/sanonz/hexo-theme-concise.git themes/concise
 ```
 
 **Concise 主题需要 Hexo 2.4 或者更高的版本**
