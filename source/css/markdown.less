@@ -1,127 +1,298 @@
 .markdown-body {
 
-  .pl-c {
-    color: #6a737d;
-  }
-
-  .pl-c1,
-  .pl-s .pl-v {
-    color: #005cc5;
-  }
-
-  .pl-e,
-  .pl-en {
-    color: #6f42c1;
-  }
-
-  .pl-smi,
-  .pl-s .pl-s1 {
-    color: #24292e;
-  }
-
-  .pl-ent {
-    color: #22863a;
-  }
-
-  .pl-k {
-    color: #d73a49;
-  }
-
-  .pl-s,
-  .pl-pds,
-  .pl-s .pl-pse .pl-s1,
-  .pl-sr,
-  .pl-sr .pl-cce,
-  .pl-sr .pl-sre,
-  .pl-sr .pl-sra {
-    color: #032f62;
-  }
-
-  .pl-v,
-  .pl-smw {
-    color: #e36209;
-  }
-
-  .pl-bu {
-    color: #b31d28;
-  }
-
-  .pl-ii {
-    color: #fafbfc;
-    background-color: #b31d28;
-  }
-
-  .pl-c2 {
-    color: #fafbfc;
-    background-color: #d73a49;
-  }
-
-  .pl-c2::before {
-    content: "^M";
-  }
-
-  .pl-sr .pl-cce {
-    font-weight: bold;
-    color: #22863a;
-  }
-
-  .pl-ml {
-    color: #735c0f;
-  }
-
-  .pl-mh,
-  .pl-mh .pl-en,
-  .pl-ms {
-    font-weight: bold;
-    color: #005cc5;
-  }
-
-  .pl-mi {
+  .pl-c, .pl-c span {
+    color: #75715e;
     font-style: italic;
-    color: #24292e;
-  }
-
+  } /* comment */
+  .pl-c1 {
+    color: #ae81ff;
+  } /* constant */
+  .pl-cce {
+    color: #66d9ef;
+  } /* constant.character.escape */
+  .pl-cn {
+    color: #66d9ef;
+  } /* constant.numeric */
+  .pl-coc {
+    color: #66d9ef;
+  } /* constant.other.color */
+  .pl-cos {
+    color: #e6db74;
+  } /* constant.other.symbol */
+  .pl-e {
+    color: #a6e22e;
+  } /* entity */
+  .pl-ef {
+    color: #a6e22e;
+  } /* entity.function */
+  .pl-en {
+    color: #a6e22e;
+  } /* entity.name */
+  .pl-enc {
+    color: #66d9ef;
+  } /* entity.name.class */
+  .pl-enf {
+    color: #a6e22e;
+  } /* entity.name.function */
+  .pl-enm {
+    color: #a6e22e;
+  } /* entity.name.method-name */
+  .pl-ens {
+    color: #66d9ef;
+  } /* entity.name.section */
+  .pl-ent {
+    color: #f92672;
+  } /* entity.name.tag */
+  .pl-entc {
+    color: #a6e22e;
+  } /* entity.name.type.class */
+  .pl-enti {
+    color: #a6e22e;
+    font-weight: bold;
+  } /* entity.name.type.instance */
+  .pl-entm {
+    color: #a6e22e;
+  } /* entity.name.type.module */
+  .pl-eoa {
+    color: #f92672;
+  } /* entity.other.attribute-name */
+  .pl-eoac {
+    color: #a6e22e;
+  } /* entity.other.attribute-name.class */
+  .pl-eoac .pl-pde {
+    color: #a6e22e;
+  } /* punctuation.definition.entity */
+  .pl-eoai {
+    color: #f92672;
+  } /* entity.other.attribute-name.id */
+  .pl-eoai .pl-pde {
+    color: #f92672;
+  } /* punctuation.definition.entity */
+  .pl-eoi {
+    color: #a6e22e;
+  } /* entity.other.inherited-class */
+  .pl-k {
+    color: #f92672;
+  } /* keyword */
+  .pl-ko {
+    color: #f92672;
+  } /* keyword.operator */
+  .pl-kolp {
+    color: #f92672;
+  } /* keyword.operator.logical.python */
+  .pl-kos {
+    color: #66d9ef;
+  } /* keyword.other.special-method */
+  .pl-kou {
+    color: #66d9ef;
+  } /* keyword.other.unit */
+  .pl-mai .pl-sf {
+    color: #a6e22e;
+  } /* support.function */
   .pl-mb {
+    color: #e6db74;
     font-weight: bold;
-    color: #24292e;
-  }
-
-  .pl-md {
-    color: #b31d28;
-    background-color: #ffeef0;
-  }
-
-  .pl-mi1 {
-    color: #22863a;
-    background-color: #f0fff4;
-  }
-
+  } /* markup.bold */
   .pl-mc {
-    color: #e36209;
-    background-color: #ffebda;
-  }
-
-  .pl-mi2 {
-    color: #f6f8fa;
-    background-color: #005cc5;
-  }
-
-  .pl-mdr {
+    color: #f92672;
+  } /* markup.changed */
+  .pl-mh .pl-pdh {
+    color: #66d9ef;
+  } /* markup.heading punctuation.definition.heading */
+  .pl-mi {
+    color: #f92672;
+    font-style: italic;
+  } /* markup.italic */
+  .pl-ml {
+    color: #e6db74;
+  } /* markup.list */
+  .pl-mm {
+    color: #a6e22e;
+  } /* meta.module-reference */
+  .pl-mp {
+    color: #66d9ef;
+  } /* meta.property-name */
+  .pl-mp1 .pl-sf {
+    color: #66d9ef;
+  } /* meta.property-value support.function */
+  .pl-mq {
+    color: #66d9ef;
+  } /* markup.quote */
+  .pl-mr {
+    color: #f92672;
+  } /* meta.require */
+  .pl-ms {
+    color: #f92672;
+  } /* meta.selector */
+  .pl-pdb {
+    color: #e6db74;
     font-weight: bold;
-    color: #6f42c1;
-  }
-
-  .pl-ba {
-    color: #586069;
-  }
-
-  .pl-sg {
-    color: #959da5;
-  }
-
-  .pl-corl {
+  } /* punctuation.definition.bold */
+  .pl-pdc {
+    color: #75715e;
+    font-style: italic;
+  } /* punctuation.definition.comment */
+  .pl-pdc1 {
+    color: #ae81ff;
+  } /* punctuation.definition.constant */
+  .pl-pde {
+    color: #66d9ef;
+  } /* punctuation.definition.entity */
+  .pl-pdi {
+    color: #f92672;
+    font-style: italic;
+  } /* punctuation.definition.italic */
+  .pl-pds {
+    color: #e6db74;
+  } /* punctuation.definition.string */
+  .pl-pdv {
+    color: #a6e22e;
+  } /* punctuation.definition.variable */
+  .pl-pse {
+    color: #66d9ef;
+  } /* punctuation.section.embedded */
+  .pl-pse .pl-s2 {
+    color: #66d9ef;
+  } /* punctuation.section.embedded source */
+  .pl-s {
+    color: #e6db74;
+  } /* storage */
+  .pl-s1 {
+    color: #e6db74;
+  } /* string */
+  .pl-s2 {
+    color: #f8f8f2;
+  } /* source */
+  .pl-mp .pl-s3 {
+    color: #66d9ef;
+  } /* support */
+  .pl-s3 {
+    color: #f92672;
+  } /* support */
+  .pl-sc {
+    color: #fd971f;
+  } /* support.class */
+  .pl-scp {
+    color: #ae81ff;
+  } /* support.constant.property-value */
+  .pl-sf {
+    color: #fd971f;
+  } /* support.function */
+  .pl-smc {
+    color: #f92672;
+  } /* storage.modifier.c */
+  .pl-smi {
+    color: #66d9ef;
+  } /* storage.modifier.import */
+  .pl-smp {
+    color: #f92672;
+  } /* storage.modifier.package */
+  .pl-sok {
+    color: #f92672;
+  } /* support.other.keyword */
+  .pl-sol {
+    color: #e6db74;
+  } /* string.other.link */
+  .pl-som {
+    color: #a6e22e;
+  } /* support.other.module */
+  .pl-sr {
+    color: #a6e22e;
+  } /* string.regexp */
+  .pl-sra {
+    color: #f92672;
+  } /* string.regexp string.regexp.arbitrary-repetition */
+  .pl-src {
+    color: #f92672;
+  } /* string.regexp.character-class */
+  .pl-sre {
+    color: #f92672;
+  } /* string.regexp source.ruby.embedded */
+  .pl-st {
+    color: #66d9ef;
+  } /* support.type */
+  .pl-stj {
+    color: #f8f8f2;
+  } /* storage.type.java */
+  .pl-stp {
+    color: #66d9ef;
+  } /* support.type.property-name */
+  .pl-sv {
+    color: #66d9ef;
+  } /* support.variable */
+  .pl-v {
+    color: #66d9ef;
+  } /* variable */
+  .pl-vi {
+    color: #66d9ef;
+  } /* variable.interpolation */
+  .pl-vo {
+    color: #a6e22e;
+  } /* variable.other */
+  .pl-vpf {
+    color: #66d9ef;
+  } /* variable.parameter.function */
+  /* diff - example: https://gist.github.com/silverwind/904159f1e71e2e626375 */
+  .pl-mi1 {
+    color: #a6e22e;
+    background: rgba(0,64,0,.5);
+  } /* markup.inserted */
+  .pl-mdht {
+    color: #a6e22e;
+    background: rgba(0,64,0,.5);
+  } /* meta.diff.header.to-file */
+  .pl-md {
+    color: #f92672;
+    background: rgba(64,0,0,.5);
+  } /* markup.deleted */
+  .pl-mdhf {
+    color: #f92672;
+    background: rgba(64,0,0,.5);
+  } /* meta.diff.header.from-file */
+  .pl-mdr {
+    color: #66d9ef;
+    font-weight: normal;
+  } /* meta.diff.range */
+  .pl-mdh {
+    color: #a6e22e;
+    font-weight: normal;
+  } /* meta.diff.header */
+  .pl-mdi {
+    color: #a6e22e;
+    font-weight: normal;
+  } /* meta.diff.index */
+  /* todo: fix unstyled classes below */
+  .pl-ii .pl-cce, /* invalid.illegal */
+  .pl-bu, /* invalid.broken, invalid.deprecated, invalid.unimplemented, message.error, brackethighlighter.unmatched, sublimelinter.mark.error */
+  .pl-ii {
+    background-color: #a6e22e;
+    color: #272822;
+  } /* invalid.illegal */
+  .pl-mo {
+    color: #fd971f;
+  } /* meta.output */
+  .pl-mri {
+    color: #66d9ef;
+  } /* markup.raw.inline */
+  .pl-ms1 {
+    background-color: #fd971f;
+  } /* meta.separator */
+  .pl-va {
+    color: #66d9ef;
+  } /* variable.assignment */
+  .pl-vpu {
+    color: #66d9ef;
+  } /* variable.parameter.url */
+  .pl-entl {
+    color: #fd971f;
+  } /* entity.name.tag.label */
+  .pl-corl, .highlight .pl-corl span.x {
+    color: #e6db74;
     text-decoration: underline;
-    color: #032f62;
+  } /* links */
+  .pl-token.active, .pl-token:hover {
+    background: #a6e22e;
+    color: #272822;
   }
 
   .octicon {

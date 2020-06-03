@@ -19,6 +19,10 @@
 .comments {
     padding-top: 20px;
     padding-bottom: 42px;
+
+    .highlight {
+        color: #f8f8f8;
+    }
 }
 
 @-webkit-keyframes gt-kf-rotate {
@@ -323,6 +327,7 @@
         -webkit-box-flex: 1;
         -ms-flex: 1;
         flex: 1;
+        width: 100%;
         margin-left: 1.25em;
     }
     .gt-header-textarea {
@@ -347,9 +352,12 @@
         }
     }
     .gt-header-preview {
+        width: 100%;
         padding: 0.75em;
         border-radius: 5px;
         border: 1px solid rgba(0,0,0,0.1);
+        overflow-x: auto;
+        overflow-y: hidden;
     }
     .gt-header-controls {
         position: relative;

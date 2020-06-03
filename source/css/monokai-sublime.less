@@ -326,7 +326,8 @@
 .language-label(@i: length(@languages)) when (@i > 0) {
     .language-label(@i - 1);
     @language: extract(@languages, @i);
-    &[class~=@{language}]:before {
+    &[class~="@{language}"]:before,
+    &[class~="highlight-source-@{language}"]:before {
         content: @language;
     }
 }
