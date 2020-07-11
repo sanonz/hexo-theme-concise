@@ -21,11 +21,11 @@ author:
 
 # Links:
 links:
-  - svg: ./source/svg/github.svg
+  - svg: ./source/svg/_github.svg
     url: https://github.com/sanonz
-  - svg: ./source/svg/more.svg
+  - svg: ./source/svg/_more.svg
     url: http://weibo.com/sanonz
-  - svg: ./source/svg/twitter.svg
+  - svg: ./source/svg/_twitter.svg
     url: https://twitter.com/sanonze
 
 
