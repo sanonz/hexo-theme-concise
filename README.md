@@ -69,11 +69,11 @@ author:
 
 # Links:
 links:
-  - svg: ./source/svg/github.svg
+  - svg: ./source/svg/_github.svg
     url: https://github.com/sanonz
-  - svg: ./source/svg/more.svg
+  - svg: ./source/svg/_more.svg
     url: http://weibo.com/sanonz
-  - svg: ./source/svg/twitter.svg
+  - svg: ./source/svg/_twitter.svg
     url: https://twitter.com/sanonze
 
 # github comment 
@@ -100,7 +100,7 @@ favicon: /images/favicon.ico
 - **excerpt_link** - 文章列表阅读更多显示文字
 - **content_max_width** - 站点布局内容区域的最大宽度，超过最大宽度左右留白出现翻页按钮，默认最大 `800px`
 - **sidebar** - 配置博主个人信息，显示在边栏
-- **links** - 配置博主个人信息下边的链接，icon 存放位置为：./source/svg
+- **links** - 配置博主个人信息下边的链接，icon 存放位置为：./source/svg，文件名最好加上`_`前缀
 - **git_commit** - 配置评论，使用的 gitalk 插件，具体配置说明请到官方查看 [https://github.com/gitalk/gitalk](https://github.com/gitalk/gitalk)
 - **baidu** - 配置站点访问统计，需要自行注册 [百度统计](https://tongji.baidu.com/) 然后获取 ID 填写到这里
 - **rss** - 在 `<head>` 标签中显示 RSS 链接
@@ -112,11 +112,11 @@ favicon: /images/favicon.ico
 
 ```yml
 links:
-  - svg: ./source/svg/github.svg
+  - svg: ./source/svg/_github.svg
     url: https://github.com/sanonz
-  - svg: ./source/svg/mail.svg
+  - svg: ./source/svg/_mail.svg
     url: mailto:sanonz@126.com
-  - svg: ./source/svg/twitter.svg
+  - svg: ./source/svg/_twitter.svg
     url: https://twitter.com/sanonze
 ```
 
