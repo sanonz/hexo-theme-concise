@@ -25,7 +25,7 @@ $ npm uninstall hexo-renderer-stylus --save
 $ git clone https://github.com/sanonz/hexo-theme-concise.git themes/concise
 ```
 
-**Concise 主题需要 Hexo 2.4 或者更高的版本**
+**Concise 主题需要 Hexo 3.x 4.x 5.x**
 
 ### 切换
 
@@ -147,7 +147,6 @@ INFO  Created: /Projects/blog/source/tags/index.md
 ```diff
   ---
   title: tags
-  date: 2019-09-29 17:27:33
 + layout: tags
   ---
 ```
@@ -192,7 +191,7 @@ archive_generator:
 首先安装 [hexo-all-minifier](https://github.com/chenzhutian/hexo-all-minifier) 插件。
 
 ```bash
-$ npm install hexo-all-minifier
+$ npm install hexo-all-minifier --save
 ```
 
 然后在站点配置文件中 `_config.yml` 启用插件。
@@ -205,7 +204,7 @@ $ npm install hexo-all-minifier
 安装 [cross-env](https://github.com/kentcdodds/cross-env) 跨平台环境变量设置脚本。
 
 ```bash
-$ npm i cross-env
+$ npm install cross-env --save
 ```
 
 生成站点，当 `process.env.NODE_ENV=production` 时 `hexo-all-minifier` 插件才工作。
