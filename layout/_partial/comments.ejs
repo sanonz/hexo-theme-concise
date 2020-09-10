@@ -8,7 +8,7 @@
         repo: <%- JSON.stringify(theme.git_commit.repo) %>,
         owner: <%- JSON.stringify(theme.git_commit.owner) %>,
         admin: [<%- theme.git_commit.admin.map(admin => JSON.stringify(admin)).join() %>],
-        id: "<%- post.path.replace(/\/*$/g,'') %>",
+        id: "<%- md5(post.path.replace(/\/*$/g,'')) %>",
         distractionFreeMode: true,
         title: <%- JSON.stringify(post.title) %>,
         body: <%- JSON.stringify(post.permalink) %>,
