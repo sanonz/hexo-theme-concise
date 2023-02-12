@@ -65,6 +65,16 @@
                 <%- body %>
             </div>
         </div>
+
+        <% if( is_post() ) { %>
+            <% if( page.next && page.next.path ) { %>
+            <a id="pagenext" href="<%= url_for(page.next.path) %>" class="article-next" title="<%= page.next.title %>"><i class="icon-arrow-right"></i></a>
+            <% } %>
+            <% if( page.prev && page.prev.path ) { %>
+            <a id="pageprev" href="<%= url_for(page.prev.path) %>" class="article-prev" title="<%= page.prev.title %>"><i class="icon-arrow-left"></i></a>
+            <% } %>
+        <% } %>
+
         <%- partial('_partial/footer', {}, {cache: true}) %>
     </main>
 
@@ -121,7 +131,7 @@
         });
     });
     </script>
-    <% if (is_post()) { %>
+    <% if ( is_post() ) { %>
         <%- js('js/scrollspy.min.js') %>
         <script type="text/javascript">
         $(document.body).scrollspy({target: '#aside-inner'});

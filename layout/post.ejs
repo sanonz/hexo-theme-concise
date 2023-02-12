@@ -1,12 +1,5 @@
 <%- partial('_partial/article', {post: page, view: true}) %>
 
-<% if( page.next ) { %>
-<a id="pagenext" href="<%= url_for(page.next.path) %>" class="article-next" title="<%= page.next.title %>"><i class="icon-arrow-right"></i></a>
-<% } %>
-<% if( page.prev ) { %>
-<a id="pageprev" href="<%= url_for(page.prev.path) %>" class="article-prev" title="<%= page.prev.title %>"><i class="icon-arrow-left"></i></a>
-<% } %>
-
 <% if( theme.git_commit.enable && page.comments ) { %>
 <%- partial('_partial/comments', {post: page}) %>
 <% } %>
